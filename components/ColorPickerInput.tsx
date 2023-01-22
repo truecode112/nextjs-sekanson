@@ -21,7 +21,6 @@ const ColorPickerInput = (props: Props) => {
             <input readOnly type="text" className="mt-1 appearance-none w-auto py-2 px-4 bg-white rounded-lg border border-gray-300 text-gray-700 placeholder-gray-400 shadow-sm text-base  focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-transparent" name="bannerBgColor" value={currentColor} />
             <div
                 onClick={() => {
-                    console.log("natiiiii", colorPickerRef.current?.select())
                     if (colorPickerRef.current) {
                         colorPickerRef.current?.select()
                     }

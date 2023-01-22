@@ -6,48 +6,35 @@ import GetYourEmbedScriptAccordion from './GetYourEmbedScriptAccordion';
 import ProjectContractSettingsAccordion from './ProjectContractSettingsAccordion';
 import ShopifyPluginBrowserFrame from './ShopifyPluginBrowserFrame';
 import ShopifyStoreSettingsAccordion from './ShopifyStoreSettingsAccordion';
+import { FormikContextType, useFormikContext } from 'formik';
+import { ApplicationType } from '../../../types/applications';
+import LoadingMessage from './LoadingMessage';
 
 type Props = {}
 
 const ManageShopifyPlugin = (props: Props) => {
-    const LoadingMessage = () => {
-        const { loading } = useManageShopifyPluginContext()
-        const [loadingText, setLoadingText] = useState<string>("Watching for changes...")
+    const formik: FormikContextType<ApplicationType> = useFormikContext()
+    const { validationError } = useManageShopifyPluginContext()
 
-        useEffect(() => {
-            setLoadingText("Saving changes...")
-            const updateFunction = setTimeout(() => {
-                setLoadingText("Changes saved.")
-                setTimeout(() => {
-                    setLoadingText("Watching for changes...")
-                }, 500);
-            }, 1000);
-            return () => {
-                clearTimeout(updateFunction)
-            }
-        }, [loading])
-
-        return (
-            <p className="my-2 text-gray-400 text-sm">
-                {loadingText}
-            </p>
-        )
-    }
     return (
         <div>
-            <section className="container mx-auto px-6 my-8 w-full flex">
+            <section className=" mx-auto px-6 my-8 w-full flex">
                 <div className="w-1/2 flex-col h-screen overflow-y-scroll pr-4">
                     <div className="mt-2 mb-6">
-                        <Link
-                            href="/my/projects"
+                        <button
+                            onClick={() => {
+                                if (typeof window !== "undefined") {
+                                    window.location.href = "/my/projects"
+                                }
+                            }}
                             className="text-blue-500 underline text-base"
                         >
                             ← Dashboard
-                        </Link>
+                        </button>
                     </div>
                     <LoadingMessage />
                     <div
-                        className="__react_component_tooltip t28f06b82-fc74-4fd8-8ad3-b6d0303fab79 place-top type-dark"
+                        className=" place-top type-dark"
                         id="t28f06b82-fc74-4fd8-8ad3-b6d0303fab79"
                         data-id="tooltip"
                     ></div>
@@ -59,10 +46,46 @@ const ManageShopifyPlugin = (props: Props) => {
                         that will go on your store.
                     </p>
 
-                    <ProjectContractSettingsAccordion key="ProjectContractSettingsAccordion" />
-                    <ShopifyStoreSettingsAccordion key="ShopifyStoreSettingsAccordion" />
-                    <BannerStyleSettingsAccordion key="BannerStyleSettingsAccordion" />
-                    <GetYourEmbedScriptAccordion key="GetYourEmbedScriptAccordion" />
+
+                    <ProjectContractSettingsAccordion />
+                    <ShopifyStoreSettingsAccordion />
+                    <BannerStyleSettingsAccordion />
+                    <GetYourEmbedScriptAccordion />
+                    < >
+                        {
+                            formik.isInitialValid || formik.isValid && (formik.isSubmitting ? (
+                                <button className="px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-gray-600 text-gray-500 hover:bg-gray-300 hover:text-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-spin h-6">
+                                        <line x1="12" y1="2" x2="12" y2="6"></line>
+                                        <line x1="12" y1="18" x2="12" y2="22"></line>
+                                        <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                                        <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                                        <line x1="2" y1="12" x2="6" y2="12"></line>
+                                        <line x1="18" y1="12" x2="22" y2="12"></line>
+                                        <line x1="4.93" y1="19.07" x2="7.76" y2="16.24">
+                                        </line>
+                                        <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                                    </svg>
+                                    <p> Validating</p>
+                                </button>
+                            ) : validationError.error ? (
+                                <button className="px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-red-600 text-red-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2"
+                                        strokeLinecap="round" stroke-linejoin="round">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                    <p>{validationError.message}</p>
+                                </button>
+                            ) : (
+                                <button className="px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-gray-600 text-gray-500 hover:bg-gray-300 hover:text-gray-600">
+                                    <p> Validate Shopify Settings</p>
+                                </button>
+                            ))
+                        }
+                    </>
+
                 </div>
                 <div className="w-1/2 flex-col h-screen overflow-y-scroll pr-4 rounded-md border-1">
                     <ShopifyPluginBrowserFrame key="ShopifyPluginBrowserFrame" />

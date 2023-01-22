@@ -14,6 +14,7 @@ import {
 import { ApplicationType } from "../types/applications";
 import { WithChildren } from "../types/common";
 import { useCookies } from "react-cookie";
+import { updateApplication } from "../libs/api/applications";
 
 interface IContextProps {
   loading: boolean;
@@ -50,12 +51,11 @@ export function ManageShopifyPluginContextWrapper({
 }: LayoutProps) {
   const [loading, setLoading] = useState(pluginData.loading);
   const [application, setApplication] = useState<ApplicationType>(pluginData.application)
+
   const [validationError, setValidationError] = useState({
     error: false,
     message: ""
   })
-
-
 
 
   const handleChangeApplication = ({ type, value }: { type: string, value: any }) => {
@@ -73,6 +73,8 @@ export function ManageShopifyPluginContextWrapper({
       .required('url cannot be empty'),
     shopifyAPIKey: Yup.string()
       .required('shopifyAPIKey cannot be empty'),
+    shopifySecretKey: Yup.string()
+      .required('shopifySecretKey cannot be empty'),
     desiredBalance: Yup.string()
       .min(1, "desiredBalance cannot be less than 1")
       .required('desiredBalance cannot be empty'),
@@ -100,6 +102,10 @@ export function ManageShopifyPluginContextWrapper({
         values.shopURL == data.shopURL) {
         setTimeout(() => {
           setSubmitting(false);
+          // we can call the backend for update application
+          // updateApplication(values.uid || "", values)
+
+
           alert(JSON.stringify(values, null, 4))
         }, 1000);
       } else {
@@ -120,10 +126,10 @@ export function ManageShopifyPluginContextWrapper({
     }
   })
 
-  const [cookies, setCookie, removeCookie] = useCookies([pluginData.application.uid || "application"]);
+  const [cookies, setCookie] = useCookies([pluginData.application.uid || "application"]);
   useEffect(() => {
     setCookie(pluginData.application.uid || "application", JSON.stringify({ ...pluginData.application, ...formik.values }, null, 4), { path: '/' })
-  }, [formik])
+  }, [{ ...formik.values }])
 
   let sharedState: IContextProps = useMemo(
     () => ({

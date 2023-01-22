@@ -1,7 +1,8 @@
 import clsx from 'clsx'
 import React, { Dispatch, SetStateAction, useState } from 'react'
 import { useAppContext } from '../context/AppContext'
-import { createNewApplication, createNewProject } from '../libs/api/projects'
+import { createNewProject } from '../libs/api/projects'
+import { createNewApplication } from '../libs/api/applications'
 
 type Props = {
     onClose: () => void,

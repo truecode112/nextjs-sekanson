@@ -19,6 +19,7 @@ export interface ApplicationType {
   name?: string | any;
   adminAddresses?: Array<string>;
   shopifyAPIKey?: string;
+  shopifySecretKey?: string;
   desiredBalance?: number;
   ctaText?: string;
   ctaTextColor?: string;

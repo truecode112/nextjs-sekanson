@@ -186,12 +186,12 @@ const ProjectGenerate = (props: Props) => {
                         </div>
                         <SmartContractSourceCode />
                         <ContractABI />
-                        <a
+                        <Link
                             href="/ZhvS2PNlQNVKgAGHlsGv/deploy/mumbai"
                             className="w-fit px-3 py-2 mt-6 text-ramppblue border border-ramppblue rounded-md hover:bg-ramppblue hover:text-white"
                         >
                             Deploy your contract on testnet! →
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

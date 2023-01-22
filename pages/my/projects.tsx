@@ -6,7 +6,8 @@ import NewProjectModal from "../../components/NewProjectModal";
 import ApplicationList from "../../components/projects/ApplicationList";
 import ProjectsList from "../../components/projects/ProjectsList";
 import { useAppContext } from "../../context/AppContext";
-import { getApplications, getProjects } from "../../libs/api/projects";
+import { getProjects } from "../../libs/api/projects";
+import { getApplications } from "../../libs/api/applications";
 
 type Props = {};
 
@@ -24,7 +25,6 @@ const Projects = (props: Props) => {
                 address: "0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"
             }
             try {
-
                 const applications = await getApplications(formData)
                 if (applications) {
                     setApplications(applications)

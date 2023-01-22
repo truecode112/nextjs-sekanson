@@ -62,15 +62,17 @@ const Manage = (props: Props) => {
             >
                 {/* <Image src="/images/bg.svg" alt={"bg-project"} /> */}
             </div>
-            {
-                applicationData.uid && (
-                    <ManageShopifyPluginContextWrapper pluginData={{
-                        application: applicationData, loading: false
-                    }}>
-                        <ManageShopifyPlugin />
-                    </ManageShopifyPluginContextWrapper>
-                )
-            }
+            <div className="w-full">
+                {
+                    applicationData.uid && (
+                        <ManageShopifyPluginContextWrapper pluginData={{
+                            application: applicationData, loading: false
+                        }}>
+                            <ManageShopifyPlugin />
+                        </ManageShopifyPluginContextWrapper>
+                    )
+                }
+            </div>
 
         </BaseLayout >
     );
