@@ -1,17 +1,22 @@
 import { fetcher } from "../../utils/address";
+import { SERVER_URL } from "../constants";
 
-export const getApplications = async (formData: any) => {
-  const api_url = `/api/applications/find-by-address`;
+export const getApplications = async (adminAddress: any) => {
+  const api_url = SERVER_URL + `/api/applications/` + adminAddress;
   try {
     const res = await fetch(api_url, {
-      method: "POST",
-      body: JSON.stringify(formData),
+      method: "GET",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     });
-    const { applications } = await res.json();
-    return applications;
+    
+    const response = await res.json();
+    if (response.error == null) {
+      return [];
+    }
+
+    return response.applications;
   } catch (error) {
     console.log(error, " is error getting applications");
     return [];
@@ -42,13 +47,14 @@ export const deleteApplication = async (id: any) => {
 
 export const createNewApplication = async (formData: any) => {
   try {
-    const { application } = await fetch("/api/applications/create", {
+    const application = await fetch(SERVER_URL + "/api/applications", {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     }).then((res) => res.json());
+    console.log(application);
     return application;
   } catch (error) {
     console.log(error, " is error");

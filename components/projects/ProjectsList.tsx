@@ -43,8 +43,10 @@ const ProjectsList = (props: Props) => {
                 >
                     <div className="w-full border-b border-gray-100 flex justify-between px-4 py-2 items-center  transition-[background-color 0.5s ease 0s]" >
                         <div className="flex space-x-2 items-center">
-                            <img alt="Blockchain Logo" data-tip="This project is on the ethereum Network"
-                                src={getLogoPath(project.network)} className="h-6 pr-3 cursor-pointer" />
+                            <picture>
+                                <img alt="Blockchain Logo" data-tip="This project is on the ethereum Network"
+                                    src={getLogoPath(project.network)} className="h-6 pr-3 cursor-pointer" />
+                            </picture>
                             <div className="flex flex-col space-y-1">
                                 <div className="flex gap-2 items-center">
                                     <p className="text-lg font-black text-gray-700">{project.name}</p>

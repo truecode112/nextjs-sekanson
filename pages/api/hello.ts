@@ -15,7 +15,7 @@ export const project = {
   onlyOwnerMinting: false,
   name: "My Mintplex Project",
   network: "ethereum",
-  adminAddresses: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
+  adminAddress: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
   walletMax: 3,
   maxMintPerTxn: 2,
   enforceRoyalties: true,
@@ -72,7 +72,7 @@ export const project = {
 //     onlyOwnerMinting: false,
 //     name: "My Mintplex Project",
 //     network: "ethereum",
-//     adminAddresses: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
+//     adminAddress: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
 //     walletMax: 3,
 //     maxMintPerTxn: 2,
 //     enforceRoyalties: true,
@@ -132,7 +132,7 @@ export const project = {
 //     hasWhiteLabel: false,
 //     testnetTxnHash: null,
 //     testnetContractAddress: null,
-//     adminAddresses: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
+//     adminAddress: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
 //     isPaidPremium: false,
 //     contractVersion: 3,
 //     contractMetaFile: null,
@@ -172,13 +172,13 @@ export const project = {
 //     walletMax: 100,
 //     tokenSymbol: "TOKEN",
 //     sellerFeeBasisPoints: 0,
-//     adminAddresses: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
+//     adminAddress: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
 //   },
 // ];
 
 export const application = {
   uid: "tCsiAaTfHQTxMjW6W3eh",
-  adminAddresses: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
+  adminAddress: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
   name: null,
   ctaText: null,
   productionContractAddress: null,
@@ -202,7 +202,7 @@ export const application = {
 // export let applications = [
 //   {
 //     uid: "tCsiAaTfHQTxMjW6W3eh",
-//     adminAddresses: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
+//     adminAddress: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
 //     name: null,
 //     ctaText: null,
 //     productionContractAddress: null,

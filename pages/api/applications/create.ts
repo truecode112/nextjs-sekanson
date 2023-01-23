@@ -27,6 +27,7 @@ export default async function handler(
     }
     case "POST": {
       try {
+        
         const newApplication = {
           ...application,
           uid: getRandomString(),

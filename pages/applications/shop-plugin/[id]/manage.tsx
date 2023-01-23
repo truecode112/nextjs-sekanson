@@ -17,16 +17,13 @@ const application = {
     productionContractAddress: "",
     tokenId: "",
     type: "shop_plugin",
-    createdAt: {
-        _nanoseconds: 999000000,
-        _seconds: 1673432502,
-    },
+    createdAt: 1674416429178,
     network: "optimism",
     shopURL: "",
     discountCode: "",
     name: "",
     ctaText: "YOUR CTA HERE",
-    adminAddresses: ["0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"],
+    adminAddress: "0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3",
     shopifyAPIKey:
         "RAMPP__f95364ca6091e96845608cb39ff8db7f:c058d1f5cf2b6fff30e3fb9311f5ac62",
     desiredBalance: 1,

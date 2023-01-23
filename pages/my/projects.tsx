@@ -15,17 +15,25 @@ const Projects = (props: Props) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [loading, setLoading] = useState(false)
     const { setApplications, setProjects } = useAppContext()
+    //const { dispatch, state: { status, wallet, balance }, } = useMetamask();
     const handleClose = () => {
         setIsModalOpen(false);
     }
 
+    const [wallet, setWallet] = useState(null);
+    const [balance, setBalance] = useState(null);
+
+    useEffect(() => {
+        const local = window.localStorage.getItem("metamaskState");
+        const data = local ? JSON.parse(local) : null;        
+        setWallet(data.wallet);
+        setBalance(data.balance);
+    },  [])
+                
     const fetchApplications = useCallback(
         async () => {
-            const formData = {
-                address: "0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"
-            }
             try {
-                const applications = await getApplications(formData)
+                const applications = await getApplications(wallet)
                 if (applications) {
                     setApplications(applications)
                     console.log("applications iss  ", applications)
@@ -35,17 +43,19 @@ const Projects = (props: Props) => {
                 console.log("error iss  ", error)
             }
         },
-        [],
+        [wallet, setApplications]
     )
 
     useEffect(() => {
-        fetchApplications()
-    }, [fetchApplications])
+        if (wallet !== null && wallet !== undefined) {
+            fetchApplications()
+        }
+    }, [fetchApplications, wallet])
 
     const fetchProjects = useCallback(
         async () => {
             const formData = {
-                address: "0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3"
+                address: wallet
             }
             try {
                 const projects = await getProjects(formData)
@@ -57,12 +67,14 @@ const Projects = (props: Props) => {
                 console.log("error iss  ", error)
             }
         },
-        [],
+        [wallet, setProjects]
     )
 
     useEffect(() => {
-        fetchProjects()
-    }, [fetchProjects])
+        if (wallet !== null && wallet !== undefined) {
+            fetchProjects()
+        }
+    }, [fetchProjects, wallet])
 
 
     return (

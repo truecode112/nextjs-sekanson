@@ -600,3 +600,4 @@ export const getChainByChainId = (chainId: number) => {
     return chainData
 }
 
+export const SERVER_URL = "http://95.217.102.97";

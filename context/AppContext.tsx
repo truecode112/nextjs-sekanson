@@ -17,7 +17,7 @@ interface IGlobalContextProps {
   setProjects: Dispatch<SetStateAction<any>>,
   setApplications: Dispatch<SetStateAction<any>>,
   applications: any[],
-  projects: any[]
+  projects: any[],
 }
 
 export const AppContext = createContext<IGlobalContextProps>({
@@ -39,8 +39,7 @@ export const AppContext = createContext<IGlobalContextProps>({
   setProjects: () => { },
   setApplications: () => { },
   applications: [],
-  projects: []
-
+  projects: [],
 });
 
 export function AppContextWrapper({ children }: any) {
@@ -60,6 +59,7 @@ export function AppContextWrapper({ children }: any) {
   const [projectsData, setProjectsData] = useState(project_data)
   const [projects, setProjects] = useState([])
   const [applications, setApplications] = useState([])
+
   let sharedState: IGlobalContextProps = useMemo(() => ({
     connected,
     loading: isLoading,
@@ -75,7 +75,7 @@ export function AppContextWrapper({ children }: any) {
     projects,
     applications,
     setProjects,
-    setApplications
+    setApplications,
 
   }), [connected, isLoading, selectedChain, , currentChainId, projectsData, applications, projects])
 

@@ -173,11 +173,13 @@ const HomeNavbar = (props: Props) => {
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <div className="dark:text-white flex gap-x-6 items-center">
                         <Link href="/">
-                            <img
-                                src="/android-chrome-512x512.png"
-                                className="h-12"
-                                alt="sekanson.xyz"
-                            />
+                            <picture>
+                                <img
+                                    src="/android-chrome-512x512.png"
+                                    className="h-12"
+                                    alt="sekanson.xyz"
+                                />
+                            </picture>
                         </Link>
                         <a
                             href="https://twitter.com/sekansonnft/status/1603589091043332096"
