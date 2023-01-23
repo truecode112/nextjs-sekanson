@@ -100,21 +100,40 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                 className="flex items-center justify-between hover:bg-gray-100 rounded-lg py-2 mt-8 cursor-pointer"
             >
                 <div className="flex space-x-2 items-center">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-6 w-6 text-green-600"
-                    >
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
+                    {formik.errors.url && formik.touched.url ? (
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-6 w-6 text-yellow-600"
+                        >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    ) : (
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-6 w-6 text-green-600"
+                        >
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    )}
                     <h2 className="font-semibold text-xl text-gray-800">
                         Plugin Contract Settings
                     </h2>
@@ -203,17 +222,16 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                     <p className="text-xs text-gray-500">
                         This is the URL of your shopify store people shop on.
                     </p>
-                    <input
-                        key="application_url"
+                    <Field
                         onChange={(e: any) => {
                             handleChangeApplication({ type: "url", value: e.target.value })
                         }}
                         value={formik.values.url}
-                        type="text"
+                        type="url"
                         className={
                             clsx(
                                 "mt-1 flex-1 appearance-none w-full py-2 px-4 bg-white rounded-lg border border-gray-300 text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-transparent ",
-                                formik.touched.url && formik.errors.url && "border-red-700"
+                                formik.errors.url && "border-red-700"
                             )
                         }
                         name="url"

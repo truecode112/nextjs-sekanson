@@ -56,7 +56,7 @@ export function AppContextWrapper({ children }: any) {
 
   // projects
 
-  const [projectsData, setProjectsData] = useState(project_data)
+  const [projectsData, setProjectsData] = useState([])
   const [projects, setProjects] = useState([])
   const [applications, setApplications] = useState([])
 

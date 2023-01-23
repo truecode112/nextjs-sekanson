@@ -68,19 +68,27 @@ export function ManageShopifyPluginContextWrapper({
   }
   const validationSchema = Yup.object({
     shopURL: Yup.string()
-      .required('shopURL cannot be empty'),
+      .required('Store Admin URL cannot be empty'),
     url: Yup.string()
-      .required('url cannot be empty'),
+      .required('Store URL cannot be empty'),
+    shopifyAccessToken: Yup.string()
+      .required('Shopify Access Token cannot be empty'),
     shopifyAPIKey: Yup.string()
-      .required('shopifyAPIKey cannot be empty'),
+      .required('Shopify API Key cannot be empty'),
     shopifySecretKey: Yup.string()
-      .required('shopifySecretKey cannot be empty'),
+      .required('Shopify API Secret cannot be empty'),
     desiredBalance: Yup.string()
-      .min(1, "desiredBalance cannot be less than 1")
-      .required('desiredBalance cannot be empty'),
+      .min(1, "Minimum Token/NFT Balance cannot be less than 1")
+      .required('Minimum Token/NFT Balance cannot be empty'),
+    priceRuleId: Yup.string()
+      .required('Discount Price Rule ID cannot be empty'),
+  });
 
-  })
-
+  const updateApp = async(adminAddress: string, uid: string, values: any)  => {
+    const res = await updateApplication(adminAddress, uid, values);
+    const response = await res.json();
+    return response;
+  }
 
   const formik = useFormik({
     initialValues: pluginData.application,
@@ -90,38 +98,63 @@ export function ManageShopifyPluginContextWrapper({
       { setSubmitting }
       // { setSubmitting }: FormikHelpers<ApplicationType>
     ) => {
-      const data: ApplicationType = {
-        shopifyAPIKey: "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",
-        discountCode: "1047562158169",
-        productionContractAddress: "0x1E90d3C5EA5eC22ba7323794BD09Ff34A917b887",
-        shopURL: "https://slimprints.myshopify.com"
-      }
-      if (values.shopifyAPIKey == data.shopifyAPIKey &&
-        values.discountCode == data.discountCode &&
-        values.productionContractAddress == data.productionContractAddress &&
-        values.shopURL == data.shopURL) {
-        setTimeout(() => {
-          setSubmitting(false);
-          // we can call the backend for update application
-          // updateApplication(values.uid || "", values)
-
-
-          alert(JSON.stringify(values, null, 4))
-        }, 1000);
-      } else {
-        setTimeout(() => {
-          setSubmitting(false);
+      try {
+        updateApplication(values.adminAddress || "" , values.uid || "", values)
+        .then((response) => {
+          console.log(response);
+          if (response == null) {
+            setSubmitting(false);
+              setValidationError({
+                error: true,
+                message: "Failed to submit!"
+              })
+              setTimeout(() => {
+                setValidationError({
+                  error: false,
+                  message: ""
+                })
+              }, 1000);
+          } else {
+            console.log('update app', response);
+            if (response.error == null) {
+              setSubmitting(false);
+              setValidationError({
+                error: false,
+                message: "Success"
+              })
+              setTimeout(() => {
+                setValidationError({
+                  error: false,
+                  message: ""
+                })
+              }, 1000);
+            } else {
+              setSubmitting(false);
+              setValidationError({
+                error: true,
+                message: response.message
+              })
+              setTimeout(() => {
+                setValidationError({
+                  error: false,
+                  message: ""
+                })
+              }, 1000)
+            }
+          }
+        })
+      } catch (e) {
+        setSubmitting(false);
           setValidationError({
             error: true,
-            message: "Failed to validate!"
+            message: "Failed to submit!"
           })
           setTimeout(() => {
             setValidationError({
               error: false,
               message: ""
             })
-          }, 1000)
-        }, 1000);
+          }, 1000);
       }
     }
   })

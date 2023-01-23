@@ -8,8 +8,8 @@ import {
 
 import type { NextPage } from "next";
 import { useMemo, useState } from "react";
-import BaseLayout from "../../components/BaseLayout";
-import ProjectDetail from "../../components/projects/ProjectDetailPage/ProjectDetail";
+import BaseLayout from "../../../components/BaseLayout";
+import ProjectDetail from "../../../components/projects/ProjectDetailPage/ProjectDetail";
 import { useRouter } from "next/router";
 
 // Put Your NFT Drop Contract address from the dashboard here

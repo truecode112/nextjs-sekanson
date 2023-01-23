@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { useAppContext } from '../../context/AppContext'
 import { deleteProject } from '../../libs/api/projects'
 import { nFormatter } from '../../utils/common'
@@ -20,14 +20,32 @@ const getLogoPath = (network: string) => {
 
 const ProjectsList = (props: Props) => {
     const { projects, setProjects } = useAppContext()
+    const [wallet, setWallet] = useState(null);
+    const [balance, setBalance] = useState(null);
+
+    useEffect(() => {
+        const local = window.localStorage.getItem("metamaskState");
+        const data = local ? JSON.parse(local) : null;        
+        setWallet(data.wallet);
+        setBalance(data.balance);
+    },  [])
+
     const handleDeleteProject = async (id: string) => {
         try {
-            const res = await deleteProject(id)
-            const filteredProjects = projects.filter((proj: any) => proj.uid !== id)
-            setProjects(filteredProjects)
-            console.log(res, " is res")
+            const res = await deleteProject(wallet, id);
+            if (res != null && res.error == null) {
+                const filteredProjects = projects.filter((proj: any) => proj.uid !== id)
+                setProjects(filteredProjects)
+            } else {
+                if (res == null) {
+                    alert('unknown error');
+                } else {
+                    alert(res.message);
+                }
+            }
         } catch (error) {
-
+            console.log(error);
+            alert(error);
         }
     }
 
@@ -37,7 +55,7 @@ const ProjectsList = (props: Props) => {
                 <div id="t295a45fd-810a-4187-8e82-6ca4caa406ea" data-id="tooltip">
                 </div>
                 <Link
-                    href={`/${project.uid}`}
+                    href={`/projects/${project.uid}`}
                     style={{ width: "30rem" }}
                     className="relative bg-gradient-to-tr hover:from-gray-100 flex flex-col h-40 border-2 border-gray-200 bg-white rounded-lg hover:shadow-md cursor-pointer"
                 >
@@ -76,7 +94,7 @@ const ProjectsList = (props: Props) => {
                             <p className="text-sm font-semibold text-gray-500 uppercase">mint fee</p>
                         </div>
                         <div className="flex flex-col items-center">
-                            <p className="text-2xl font-black text-gray-700">0%</p>
+                            <p className="text-2xl font-black text-gray-700">{nFormatter(project.royalties, 1)}%</p>
                             <p className="text-sm font-semibold text-gray-500 uppercase">royalties</p>
                         </div>
                     </div>

@@ -50,13 +50,10 @@ const Projects = (props: Props) => {
         
     }, [wallet, setApplications])
 
-    const fetchProjects = useCallback(
-        async () => {
-            const formData = {
-                address: wallet
-            }
+    useEffect(() => {
+        const fetchProjects = async() => {
             try {
-                const projects = await getProjects(formData)
+                const projects = await getProjects(wallet)
                 if (projects) {
                     setProjects(projects)
                     console.log("data iss  ", projects)
@@ -64,17 +61,12 @@ const Projects = (props: Props) => {
             } catch (error) {
                 console.log("error iss  ", error)
             }
-        },
-        [wallet, setProjects]
-    )
-
-    useEffect(() => {
+        };
         if (wallet !== null && wallet !== undefined) {
             fetchProjects()
         }
-    }, [fetchProjects, wallet])
-
-
+    }, [wallet, setProjects]);
+    
     return (
         <BaseLayout>
             {isModalOpen && <NewProjectModal setLoading={setLoading} onClose={handleClose} />}

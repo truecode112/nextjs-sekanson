@@ -4,7 +4,7 @@ export interface ApplicationType {
   contractType?: string;
   url?: string;
   testnetContractAddress?: string;
-  priceRuleData?: any;
+  adminAccessScope?: any;
   isPaidPremium?: boolean;
   productionContractAddress?: string;
   tokenId?: string | any;

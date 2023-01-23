@@ -15,7 +15,7 @@ const defaultApplication: ApplicationType = {
     contractType: "ERC-721A",
     url: "",
     testnetContractAddress: "",
-    priceRuleData: "",
+    adminAccessScope: "",
     isPaidPremium: false,
     productionContractAddress: "",
     tokenId: "",

@@ -163,7 +163,6 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                         className="border border-gray-600 bg-gray-100 p-2 rounded-md cursor-pointer overflow-x-hidden"
                     >
                         <pre className="text-gray-500 text-xs break-all flex  flex-wrap p-3">
-                            <br />
                             &lt;!-- Plugin provided by Sekanson --&gt;
                             <br />
                             &lt;script <br />
@@ -204,7 +203,6 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             className="relative text-gray-500 text-xs break-all"
                         // style={{ filter: "blur(7px)", zIndex: 1 }}
                         >
-                            <br />
                             &lt;!-- Plugin provided by Sekanson --&gt;
                             <br />
                             &lt;script <br />

@@ -240,7 +240,7 @@ let applications = [
     priceRuleId: null,
     shopifyAPIKey: null,
     url: null,
-    priceRuleData: null,
+    adminAccessScope: null,
     bannerBgColor: "#FFFFFF",
     testnetContractAddress: null,
     tokenId: null,

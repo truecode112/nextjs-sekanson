@@ -75,22 +75,21 @@ export const createNewApplication = async (formData: any) => {
     } else {
       return null;
     }
-    return response;
   } catch (error) {
     console.log(error, " is error");
     return null;
   }
 };
-export const updateApplication = async (id: string, formData: any) => {
+export const updateApplication = async (id: string, uid: string, formData: any) => {
   try {
-    const { application } = await fetch(`/api/applications/${id}/update`, {
+    const response = await fetch(SERVER_URL + `/api/applications/${id}/${uid}`, {
       method: "PATCH",
       body: JSON.stringify(formData),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     }).then((res) => res.json());
-    return application;
+    return response;
   } catch (error) {
     console.log(error, " is error");
     return null;
