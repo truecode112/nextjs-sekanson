@@ -111,6 +111,11 @@
   animation-iteration-count: infinite
 }
 
+.submit-project:disabled{
+  background: #F3F4F6;
+  cursor: not-allowed;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

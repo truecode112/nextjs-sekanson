@@ -4,10 +4,13 @@ import BaseLayout from "../../../../components/BaseLayout";
 import ManageShopifyPlugin from "../../../../components/manage/ManageShopifyPlugin/ManageShopifyPlugin";
 import { ManageShopifyPluginContextWrapper } from "../../../../context/ManageShopifyPluginContext";
 import { ApplicationType } from "../../../../types/applications";
+import { useRouter } from 'next/router';
+import { getApplicationById } from "../../../../libs/api/applications";
 
 type Props = {};
-const application = {
-    uid: "bMrUQ5JGoO2oHdk4jSk0",
+
+const defaultApplication: ApplicationType = {
+    uid: "",
     priceRuleId: "",
     contractType: "ERC-721A",
     url: "",
@@ -17,31 +20,69 @@ const application = {
     productionContractAddress: "",
     tokenId: "",
     type: "shop_plugin",
-    createdAt: 1674416429178,
+    createdAt: Date.now(),
     network: "optimism",
     shopURL: "",
     discountCode: "",
     name: "",
     ctaText: "YOUR CTA HERE",
-    adminAddress: "0x767d04c7c1d82b922d9d0b8f4b36d057bc1065d3",
-    shopifyAPIKey:
-        "RAMPP__f95364ca6091e96845608cb39ff8db7f:c058d1f5cf2b6fff30e3fb9311f5ac62",
+    adminAddress: "",
+    shopifyAPIKey: "",
     desiredBalance: 1,
-    ctaTextColor: "#000000",
-    bannerBgColor: "#FFFFFF",
+    ctaTextColor: "#FF0000",
+    bannerBgColor: "#FF0000",
 }
 
 const Manage = (props: Props) => {
-    const [cookies] = useCookies([application.uid]);
+    const router = useRouter();
+    const { id } = router.query;
+
     const [applicationData, setApplicationData] = useState<ApplicationType>({})
+
+    const [wallet, setWallet] = useState(null);
+    const [balance, setBalance] = useState(null);
+
     useEffect(() => {
-        const previousFormData = cookies[application.uid || "application"]
+        const local = window.localStorage.getItem("metamaskState");
+        const data = local ? JSON.parse(local) : null;        
+        setWallet(data.wallet);
+        setBalance(data.balance);
+    },  [])
+
+    useEffect(() => {
+        const getAppData = async () => {
+            if (wallet !== null && wallet !== undefined && id !== null && id !== undefined) {
+                const appData = await getApplicationById(wallet, id as string)
+                console.log('appData', appData);
+                if (appData != null) {
+                    setApplicationData(appData as ApplicationType);
+                    return;
+                }
+                defaultApplication.adminAddress = wallet;
+                defaultApplication.uid = id as string;
+                defaultApplication.type = "shop_plugin";
+                setApplicationData(defaultApplication);
+            }
+        }
+
+        getAppData();
+        
+        
+        /*const previousFormData = cookies[application.uid || "application"]
         if (previousFormData) {
             setApplicationData(previousFormData)
         } else {
             setApplicationData(application)
+        }*/
+    }, [id, wallet])
+
+    /*useEffect(() => {
+        // before render
+
+        return () => {
+            // when exitting
         }
-    }, [])
+    }, [])*/
 
     return (
         <BaseLayout>

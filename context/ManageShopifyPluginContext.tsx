@@ -126,10 +126,10 @@ export function ManageShopifyPluginContextWrapper({
     }
   })
 
-  const [cookies, setCookie] = useCookies([pluginData.application.uid || "application"]);
-  useEffect(() => {
+  //const [cookies, setCookie] = useCookies([pluginData.application.uid || "application"]);
+  /*useEffect(() => {
     setCookie(pluginData.application.uid || "application", JSON.stringify({ ...pluginData.application, ...formik.values }, null, 4), { path: '/' })
-  }, [{ ...formik.values }])
+  }, [{ ...formik.values }])*/
 
   let sharedState: IContextProps = useMemo(
     () => ({

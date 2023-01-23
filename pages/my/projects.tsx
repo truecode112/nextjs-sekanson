@@ -29,28 +29,26 @@ const Projects = (props: Props) => {
         setWallet(data.wallet);
         setBalance(data.balance);
     },  [])
-                
-    const fetchApplications = useCallback(
-        async () => {
+
+    useEffect(() => {
+        const fetchApplications = async() => {
             try {
                 const applications = await getApplications(wallet)
+                console.log("applications", applications)
                 if (applications) {
                     setApplications(applications)
                     console.log("applications iss  ", applications)
                 }
-
             } catch (error) {
                 console.log("error iss  ", error)
             }
-        },
-        [wallet, setApplications]
-    )
+        }
 
-    useEffect(() => {
         if (wallet !== null && wallet !== undefined) {
             fetchApplications()
         }
-    }, [fetchApplications, wallet])
+        
+    }, [wallet, setApplications])
 
     const fetchProjects = useCallback(
         async () => {

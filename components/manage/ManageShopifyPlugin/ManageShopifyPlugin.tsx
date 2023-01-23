@@ -53,7 +53,7 @@ const ManageShopifyPlugin = (props: Props) => {
                     <GetYourEmbedScriptAccordion />
                     < >
                         {
-                            formik.isInitialValid || formik.isValid && (formik.isSubmitting ? (
+                            (formik.isSubmitting ? (
                                 <button className="px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-gray-600 text-gray-500 hover:bg-gray-300 hover:text-gray-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-spin h-6">
                                         <line x1="12" y1="2" x2="12" y2="6"></line>
@@ -66,7 +66,7 @@ const ManageShopifyPlugin = (props: Props) => {
                                         </line>
                                         <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
                                     </svg>
-                                    <p> Validating</p>
+                                    <p> Submitting</p>
                                 </button>
                             ) : validationError.error ? (
                                 <button className="px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-red-600 text-red-500">
@@ -79,8 +79,8 @@ const ManageShopifyPlugin = (props: Props) => {
                                     <p>{validationError.message}</p>
                                 </button>
                             ) : (
-                                <button className="px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-gray-600 text-gray-500 hover:bg-gray-300 hover:text-gray-600">
-                                    <p> Validate Shopify Settings</p>
+                                <button disabled={!(formik.isInitialValid && formik.isValid)} className="submit-project px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-gray-600 text-gray-500 hover:bg-gray-300 hover:text-gray-600">
+                                    <p> Submit</p>
                                 </button>
                             ))
                         }

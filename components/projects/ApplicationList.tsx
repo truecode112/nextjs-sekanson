@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../../context/AppContext'
 import { deleteApplication } from '../../libs/api/applications'
 import { useRouter } from 'next/router'
@@ -12,13 +12,32 @@ const ApplicationList = (props: Props) => {
     const { applications, setApplications } = useAppContext()
     const router = useRouter()
 
+    const [wallet, setWallet] = useState(null);
+    const [balance, setBalance] = useState(null);
+
+    useEffect(() => {
+        const local = window.localStorage.getItem("metamaskState");
+        const data = local ? JSON.parse(local) : null;        
+        setWallet(data.wallet);
+        setBalance(data.balance);
+    },  [])
+
     const handleDeleteApplication = async (id: string) => {
         try {
-            const res = await deleteApplication(id)
-            const filteredApps = applications.filter((app: any) => app.uid !== id)
-            setApplications(filteredApps)
+            const res = await deleteApplication(wallet, id)
+            if (res != null && res.error == null) {
+                const filteredApps = applications.filter((app: any) => app.uid !== id)
+                setApplications(filteredApps)
+            } else {
+                if (res == null) {
+                    alert('unknown error');
+                } else {
+                    alert(res.message);
+                }
+            }
         } catch (error) {
-
+            console.log(error);
+            alert(error);
         }
     }
 

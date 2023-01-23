@@ -16,8 +16,8 @@ const getNetworkInfo = (network: string) => {
                     chainName: "Ethereum"
                 },
                 testnet: {
-                    name: "ethereum",
-                    chainName: "Ethereum"
+                    name: "goerli",
+                    chainName: "Goerli"
                 }
             }
         }
@@ -155,7 +155,7 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                         <p className="text-gray-600 text-lg">{getNetworkInfo(formik.values.network || "")?.testnet.chainName}</p>
                         <p className="text-gray-600 text-xs">
                             Copy this embed HTML code into your shop to allow people to
-                            verify their holdings on the Goerli Optimism network.
+                            verify their holdings on the {getNetworkInfo(formik.values.network || "")?.testnet.chainName} network.
                         </p>
                     </div>
                     <div
@@ -167,11 +167,12 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             &lt;!-- Plugin provided by Sekanson --&gt;
                             <br />
                             &lt;script <br />
-                            &nbsp;data-plugin-id=&ldquo;{formik.values.uid}&ldquo; <br />
-                            &nbsp;data-network=&ldquo;{getNetworkInfo(formik.values.network || "")?.testnet.name}&ldquo; <br />
-                            &nbsp;data-styles=&ldquo;eyJzcmMiOiJodHRwczovL3lvdXJjb3JlaHViLmNvbS9zZWthbnNvbi9lbWJlZHMvYmFubmVyIiwid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiODBweCIsImJvcmRlciI6Im5vbmUiLCJvdmVyZmxvdyI6ImhpZGRlbiAhaW1wb3J0YW50In0=&ldquo; <br />
-                            &nbsp;data-token-id=&ldquo;&ldquo; type=&ldquo;text/javascript&ldquo; <br />
-                            &nbsp;src=&ldquo;https://yourcorehub.com/sekanson/resources/setup.js&ldquo; <br />
+                            &nbsp;data-plugin-id=&quot;{formik.values.uid}&quot; <br />
+                            &nbsp;data-network=&quot;{getNetworkInfo(formik.values.network || "")?.testnet.name}&quot; <br />
+                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3lvdXJjb3JlaHViLmNvbS9zZWthbnNvbi9lbWJlZHMvYmFubmVyIiwid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiODBweCIsImJvcmRlciI6Im5vbmUiLCJvdmVyZmxvdyI6ImhpZGRlbiAhaW1wb3J0YW50In0=&quot; <br />
+                            &nbsp;data-token-id=&quot;&quot; <br />
+                            &nbsp;type=&rdquo;text/javascript&quot; <br />
+                            &nbsp;src=&quot;https://sekanson.com/slimprints/setup.js&quot; <br />
                             &gt;&lt;/script&gt;
                             <br />
                             &lt;!-- End Sekanson Plugin --&gt;
@@ -186,7 +187,7 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                         </p>
                         <p className="text-gray-600 text-xs">
                             Copy this embed HTML code into your shop to allow people to
-                            verify their holdings on the Optimism network.
+                            verify their holdings on the {getNetworkInfo(formik.values.network || "")?.mainnet.chainName} network.
                         </p>
                     </div>
                     <div className="relative border border-gray-600 bg-gray-100 p-5 h-fit min-h-[150px] rounded-md overflow-x-hidden">
@@ -207,11 +208,12 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             &lt;!-- Plugin provided by Sekanson --&gt;
                             <br />
                             &lt;script <br />
-                            &nbsp;data-plugin-id=&ldquo;{formik.values.uid}&ldquo; <br />
-                            &nbsp;data-network=&ldquo;{getNetworkInfo(formik.values.network || "")?.mainnet.name}&ldquo; <br />
-                            &nbsp;data-styles=&ldquo;eyJzcmMiOiJodHRwczovL3lvdXJjb3JlaHViLmNvbS9zZWthbnNvbi9lbWJlZHMvYmFubmVyIiwid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiODBweCIsImJvcmRlciI6Im5vbmUiLCJvdmVyZmxvdyI6ImhpZGRlbiAhaW1wb3J0YW50In0=&ldquo; <br />
-                            &nbsp;data-token-id=&ldquo;&ldquo; type=&ldquo;text/javascript&ldquo; <br />
-                            &nbsp;src=&ldquo;https://yourcorehub.com/sekanson/resources/setup.js&ldquo; <br />
+                            &nbsp;data-plugin-id=&quot;{formik.values.uid}&quot; <br />
+                            &nbsp;data-network=&quot;{getNetworkInfo(formik.values.network || "")?.mainnet.name}&quot; <br />
+                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3lvdXJjb3JlaHViLmNvbS9zZWthbnNvbi9lbWJlZHMvYmFubmVyIiwid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiODBweCIsImJvcmRlciI6Im5vbmUiLCJvdmVyZmxvdyI6ImhpZGRlbiAhaW1wb3J0YW50In0=&quot; <br />
+                            &nbsp;data-token-id=&quot;&quot; <br />
+                            &nbsp;type=&quot;text/javascript&quot; <br />
+                            &nbsp;src=&quot;https://sekanson.com/slimprints/setup.js&quot; <br />
                             &gt;&lt;/script&gt;
                             <br />
                             &lt;!-- End Sekanson Plugin --&gt;
