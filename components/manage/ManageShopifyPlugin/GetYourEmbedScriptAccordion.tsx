@@ -168,9 +168,9 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             &lt;script <br />
                             &nbsp;data-plugin-id=&quot;{formik.values.uid}&quot; <br />
                             &nbsp;data-network=&quot;{getNetworkInfo(formik.values.network || "")?.testnet.name}&quot; <br />
-                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3lvdXJjb3JlaHViLmNvbS9zZWthbnNvbi9lbWJlZHMvYmFubmVyIiwid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiODBweCIsImJvcmRlciI6Im5vbmUiLCJvdmVyZmxvdyI6ImhpZGRlbiAhaW1wb3J0YW50In0=&quot; <br />
+                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3Nla2Fuc29uLmNvbS9zbGltcHJpbnRzL3Nla2Fuc29uX2Jhbm5lci5odG1sIiwid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiODBweCIsImJvcmRlciI6Im5vbmUiLCJvdmVyZmxvdyI6ImhpZGRlbiAhaW1wb3J0YW50In0&quot; <br />
                             &nbsp;data-token-id=&quot;&quot; <br />
-                            &nbsp;type=&rdquo;text/javascript&quot; <br />
+                            &nbsp;type=&quot;text/javascript&quot; <br />
                             &nbsp;src=&quot;https://sekanson.com/slimprints/setup.js&quot; <br />
                             &gt;&lt;/script&gt;
                             <br />
@@ -208,7 +208,7 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             &lt;script <br />
                             &nbsp;data-plugin-id=&quot;{formik.values.uid}&quot; <br />
                             &nbsp;data-network=&quot;{getNetworkInfo(formik.values.network || "")?.mainnet.name}&quot; <br />
-                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3lvdXJjb3JlaHViLmNvbS9zZWthbnNvbi9lbWJlZHMvYmFubmVyIiwid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiODBweCIsImJvcmRlciI6Im5vbmUiLCJvdmVyZmxvdyI6ImhpZGRlbiAhaW1wb3J0YW50In0=&quot; <br />
+                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3Nla2Fuc29uLmNvbS9zbGltcHJpbnRzL3Nla2Fuc29uX2Jhbm5lci5odG1sIiwid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiODBweCIsImJvcmRlciI6Im5vbmUiLCJvdmVyZmxvdyI6ImhpZGRlbiAhaW1wb3J0YW50In0&quot; <br />
                             &nbsp;data-token-id=&quot;&quot; <br />
                             &nbsp;type=&quot;text/javascript&quot; <br />
                             &nbsp;src=&quot;https://sekanson.com/slimprints/setup.js&quot; <br />

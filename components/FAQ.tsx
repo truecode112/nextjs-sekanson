@@ -45,7 +45,7 @@ const FAQ = (props: Props) => {
           </h3>
         </dt>
         <dd className={clsx(
-          " transition-all ease-in-out duration-[2000ms] delay-300",
+          " transition ease-in-out duration-1000 delay-100 my-2",
           active ? "block" : "hidden"
         )}>
           <p className="text-gray-500">
@@ -54,12 +54,10 @@ const FAQ = (props: Props) => {
         </dd>
       </div>
     )
+
   }
-
-
-
   return (
-    <div>
+    <>
       <section
         id="faq"
         className="py-4 px-2 border-t border-b border-color-gray-100"
@@ -75,7 +73,7 @@ const FAQ = (props: Props) => {
             answers you might have.
           </p>
         </div>
-        <dl className="w-full md:w-1/2 mx-auto px-2 md:px-0">
+        <dl className="max-w-2xl mx-auto px-2 md:px-0">
           {faqs.map((faq: any, index: any) => {
             return (
               <SingleFaqComponent key={index} faq={faq} />
@@ -83,7 +81,7 @@ const FAQ = (props: Props) => {
           })}
         </dl>
       </section>
-    </div>
+    </>
   );
 };
 
