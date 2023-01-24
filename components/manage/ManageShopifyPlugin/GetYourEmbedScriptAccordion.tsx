@@ -168,10 +168,10 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             &lt;script <br />
                             &nbsp;data-plugin-id=&quot;{formik.values.uid}&quot; <br />
                             &nbsp;data-network=&quot;{getNetworkInfo(formik.values.network || "")?.testnet.name}&quot; <br />
-                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3Nla2Fuc29uLmNvbS9zbGltcHJpbnRzL3Nla2Fuc29uX2Jhbm5lci5odG1sIiwid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiODBweCIsImJvcmRlciI6Im5vbmUiLCJvdmVyZmxvdyI6ImhpZGRlbiAhaW1wb3J0YW50In0&quot; <br />
+                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL25lbmFkLmhhcml3aGl0ZWRyZWFtLmNvbS9zbGltcHJpbnRzL2VtYmVkcy9iYW5uZXIiLCJ3aWR0aCI6IjEwMCUiLCJoZWlnaHQiOiI4MHB4IiwiYm9yZGVyIjoibm9uZSIsIm92ZXJmbG93IjoiaGlkZGVuICFpbXBvcnRhbnQifQ==&quot; <br />
                             &nbsp;data-token-id=&quot;&quot; <br />
                             &nbsp;type=&quot;text/javascript&quot; <br />
-                            &nbsp;src=&quot;https://sekanson.com/slimprints/setup.js&quot; <br />
+                            &nbsp;src=&quot;https://nenad.hariwhitedream.com/setup.js&quot; <br />
                             &gt;&lt;/script&gt;
                             <br />
                             &lt;!-- End Sekanson Plugin --&gt;
@@ -208,10 +208,10 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             &lt;script <br />
                             &nbsp;data-plugin-id=&quot;{formik.values.uid}&quot; <br />
                             &nbsp;data-network=&quot;{getNetworkInfo(formik.values.network || "")?.mainnet.name}&quot; <br />
-                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3Nla2Fuc29uLmNvbS9zbGltcHJpbnRzL3Nla2Fuc29uX2Jhbm5lci5odG1sIiwid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiODBweCIsImJvcmRlciI6Im5vbmUiLCJvdmVyZmxvdyI6ImhpZGRlbiAhaW1wb3J0YW50In0&quot; <br />
+                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL25lbmFkLmhhcml3aGl0ZWRyZWFtLmNvbS9zbGltcHJpbnRzL2VtYmVkcy9iYW5uZXIiLCJ3aWR0aCI6IjEwMCUiLCJoZWlnaHQiOiI4MHB4IiwiYm9yZGVyIjoibm9uZSIsIm92ZXJmbG93IjoiaGlkZGVuICFpbXBvcnRhbnQifQ==&quot; <br />
                             &nbsp;data-token-id=&quot;&quot; <br />
                             &nbsp;type=&quot;text/javascript&quot; <br />
-                            &nbsp;src=&quot;https://sekanson.com/slimprints/setup.js&quot; <br />
+                            &nbsp;src=&quot;https://nenad.hariwhitedream.com/setup.js&quot; <br />
                             &gt;&lt;/script&gt;
                             <br />
                             &lt;!-- End Sekanson Plugin --&gt;

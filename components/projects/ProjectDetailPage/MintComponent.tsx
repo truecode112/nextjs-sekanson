@@ -15,6 +15,8 @@ const MintComponent = (props: Props) => {
     const address = useAddress();
     const [quantity, setQuantity] = useState(1);
 
+    console.log('nftDrop', nftDrop);
+    console.log('props.myNftDropContractAddress', props.myNftDropContractAddress);
     const { data: contractMetadata } = useContractMetadata(nftDrop);
 
     const claimConditions = useClaimConditions(nftDrop);
@@ -115,13 +117,18 @@ const MintComponent = (props: Props) => {
     ]);
 
     const isSoldOut = useMemo(() => {
+        console.log('activeClaimCondition.isSuccess', activeClaimCondition.isSuccess);
+        console.log('activeClaimCondition.data', activeClaimCondition.data);
+        console.log('activeClaimCondition.data?.availableSupply', activeClaimCondition.data?.availableSupply);
+        console.log('numberClaimed', numberClaimed);
+        console.log('numberTotal', numberTotal);
         try {
             return (
                 (activeClaimCondition.isSuccess &&
                     BigNumber.from(activeClaimCondition.data?.availableSupply || 0).lte(
                         0
-                    )) ||
-                numberClaimed === numberTotal
+                    ))/* ||
+                numberClaimed === numberTotal*/
             );
         } catch (e) {
             return false;

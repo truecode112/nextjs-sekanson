@@ -116,6 +116,26 @@
   cursor: not-allowed;
 }
 
+.intro {
+  background: url("/images/intro.gif");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro_connect {
+  background-image: url('/images/intro_connect.png');
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: center;
+  width: 120px;
+  height: 30px;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

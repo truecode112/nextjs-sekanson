@@ -11,7 +11,7 @@ type Props = {}
 
 const networkChains: Array<{ id: ChainId, name: string, src: string, className: string, activeClass: string }> = [
     {
-        id: ChainId.Mainnet,
+        id: ChainId.Goerli,
         name: "Ethereum",
         src: "/images/eth-logo.svg",
         className: "border-gray-300  border hover:border-gray-700 text-gray-300 hover:text-gray-700",

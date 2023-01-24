@@ -7,7 +7,7 @@ import { CookiesProvider } from 'react-cookie';
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const activeChainId = ChainId.Mumbai;
+  const activeChainId = ChainId.Goerli;
   return (
     <ThirdwebProvider desiredChainId={activeChainId}>
       <CookiesProvider>
