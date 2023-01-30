@@ -168,7 +168,7 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             &lt;script <br />
                             &nbsp;data-plugin-id=&quot;{formik.values.uid}&quot; <br />
                             &nbsp;data-network=&quot;{getNetworkInfo(formik.values.network || "")?.testnet.name}&quot; <br />
-                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL25lbmFkLmhhcml3aGl0ZWRyZWFtLmNvbS9zbGltcHJpbnRzL2VtYmVkcy9iYW5uZXIiLCJ3aWR0aCI6IjEwMCUiLCJoZWlnaHQiOiI4MHB4IiwiYm9yZGVyIjoibm9uZSIsIm92ZXJmbG93IjoiaGlkZGVuICFpbXBvcnRhbnQifQ==&quot; <br />
+                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3Nla2Fuc29uLmNvbS9zbGltcHJpbnRzL2VtYmVkcy9iYW5uZXIiLCJ3aWR0aCI6IjEwMCUiLCJoZWlnaHQiOiI4MHB4IiwiYm9yZGVyIjoibm9uZSIsIm92ZXJmbG93IjoiaGlkZGVuICFpbXBvcnRhbnQifQ==&quot; <br />
                             &nbsp;data-token-id=&quot;&quot; <br />
                             &nbsp;type=&quot;text/javascript&quot; <br />
                             &nbsp;src=&quot;https://nenad.hariwhitedream.com/setup.js&quot; <br />
@@ -208,7 +208,7 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             &lt;script <br />
                             &nbsp;data-plugin-id=&quot;{formik.values.uid}&quot; <br />
                             &nbsp;data-network=&quot;{getNetworkInfo(formik.values.network || "")?.mainnet.name}&quot; <br />
-                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL25lbmFkLmhhcml3aGl0ZWRyZWFtLmNvbS9zbGltcHJpbnRzL2VtYmVkcy9iYW5uZXIiLCJ3aWR0aCI6IjEwMCUiLCJoZWlnaHQiOiI4MHB4IiwiYm9yZGVyIjoibm9uZSIsIm92ZXJmbG93IjoiaGlkZGVuICFpbXBvcnRhbnQifQ==&quot; <br />
+                            &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3Nla2Fuc29uLmNvbS9zbGltcHJpbnRzL2VtYmVkcy9iYW5uZXIiLCJ3aWR0aCI6IjEwMCUiLCJoZWlnaHQiOiI4MHB4IiwiYm9yZGVyIjoibm9uZSIsIm92ZXJmbG93IjoiaGlkZGVuICFpbXBvcnRhbnQifQ==&quot; <br />
                             &nbsp;data-token-id=&quot;&quot; <br />
                             &nbsp;type=&quot;text/javascript&quot; <br />
                             &nbsp;src=&quot;https://nenad.hariwhitedream.com/setup.js&quot; <br />
