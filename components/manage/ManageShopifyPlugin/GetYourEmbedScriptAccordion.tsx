@@ -171,7 +171,7 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3Nla2Fuc29uLmNvbS9zbGltcHJpbnRzL2VtYmVkcy9iYW5uZXIiLCJ3aWR0aCI6IjEwMCUiLCJoZWlnaHQiOiI4MHB4IiwiYm9yZGVyIjoibm9uZSIsIm92ZXJmbG93IjoiaGlkZGVuICFpbXBvcnRhbnQifQ==&quot; <br />
                             &nbsp;data-token-id=&quot;&quot; <br />
                             &nbsp;type=&quot;text/javascript&quot; <br />
-                            &nbsp;src=&quot;https://nenad.hariwhitedream.com/setup.js&quot; <br />
+                            &nbsp;src=&quot;https://sekanson.com/slimprints/embeds/setup&quot; <br />
                             &gt;&lt;/script&gt;
                             <br />
                             &lt;!-- End Sekanson Plugin --&gt;
@@ -211,7 +211,7 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                             &nbsp;data-styles=&quot;eyJzcmMiOiJodHRwczovL3Nla2Fuc29uLmNvbS9zbGltcHJpbnRzL2VtYmVkcy9iYW5uZXIiLCJ3aWR0aCI6IjEwMCUiLCJoZWlnaHQiOiI4MHB4IiwiYm9yZGVyIjoibm9uZSIsIm92ZXJmbG93IjoiaGlkZGVuICFpbXBvcnRhbnQifQ==&quot; <br />
                             &nbsp;data-token-id=&quot;&quot; <br />
                             &nbsp;type=&quot;text/javascript&quot; <br />
-                            &nbsp;src=&quot;https://nenad.hariwhitedream.com/setup.js&quot; <br />
+                            &nbsp;src=&quot;https://sekanson.com/slimprints/embeds/setup&quot; <br />
                             &gt;&lt;/script&gt;
                             <br />
                             &lt;!-- End Sekanson Plugin --&gt;
