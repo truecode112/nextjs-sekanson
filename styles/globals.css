@@ -117,11 +117,8 @@
 }
 
 .intro {
-  background: url("/images/intro.gif");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .intro_connect {
