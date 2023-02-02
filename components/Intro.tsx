@@ -49,24 +49,28 @@ const Intro = (props: Props) => {
     };
 
     return (
-        <section>
+        <section className="intro_bg">
             <Head>
                 <title>Sekanson - Build and grow your NFT community without code</title>
                 <meta name="description" content="Launching and managing an NFT community is hard. Sekanson has all the tools you need to launch, track, and manage your NFT community and project at scale. All without code."></meta>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="intro">
+            <div className="intro_bg">
                     {play == true ? (
                         <Image 
-                            src="/images/intro.gif" 
-                            alt=""
-                            fill/>
+                            src="/images/intro_piece.gif"
+                            className="intro_piece_center"
+                            width={147}
+                            height={170}
+                            alt=""/>
                     ) : (
                         <Image
-                            src="/images/intro_still.png"
+                            src="/images/intro_piece_still.gif"
+                            className="intro_piece_center"
                             alt=""
-                            fill
+                            width={147}
+                            height={170}
                         />
                     )}
                 
