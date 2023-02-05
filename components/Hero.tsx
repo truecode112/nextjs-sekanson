@@ -31,18 +31,17 @@ const Hero = (props: Props) => {
                 params: [accounts[0], "latest"],
             });
 
-            console.log("nati ", accounts, balance)
             dispatch({ type: "connect", wallet: accounts[0], balance });
 
             // we can register an event listener for changes to the users wallet
             listen();
-            window.location.href = "/my/projects"
+            router.push('/my/projects');
         }
     };
 
     const handleGoToDashboard = async () => {
         dispatch({ type: "loading" });
-        window.location.href = "/my/projects"
+        router.push('/my/projects');
     };
 
     return (

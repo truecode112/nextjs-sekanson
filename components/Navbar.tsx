@@ -46,7 +46,7 @@ const Navbar = (props: Props) => {
     const handleDisconnect = () => {
         dispatch({ type: "loading" });
         dispatch({ type: "disconnect" });
-        window.location.href = "/"
+        router.push('/');
     };
 
     const [isMenuOpened, setIsMenuOpened] = useState(false)

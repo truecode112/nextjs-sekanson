@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 import React, { ReactNode, useEffect, useState } from "react";
 import { WithChildren } from "../types/common";
 import Footer from "./Footer";
@@ -13,7 +13,7 @@ interface LayoutProps extends WithChildren {
     sidebar?: ReactNode;
 }
 const BaseLayout = ({ children }: LayoutProps) => {
-    const router = useRouter()
+    const router = useRouter();
 
     const [canGo, enableGo] = useState(false);
 
@@ -29,12 +29,12 @@ const BaseLayout = ({ children }: LayoutProps) => {
                 const balance = await edition.balanceOf(accounts[0]);
                 
                 if (balance.eq(0)) {
-                    return window.location.href = "/";
+                    router.push('/');
                 } else {
                     enableGo(true);
                 }
             } else {
-                return window.location.href = "/";
+                router.push('/');
             }
         }
         checkBalance();

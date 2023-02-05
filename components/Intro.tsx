@@ -1,6 +1,6 @@
 import { Yeseva_One } from "@next/font/google";
 import clsx from "clsx";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 import React, { useState } from "react";
 import { useAppContext } from "../context/AppContext";
 import { useListen } from "../hooks/useListen";
@@ -13,6 +13,8 @@ type Props = {};
 
 
 const Intro = (props: Props) => {
+    const router = useRouter();
+
     const { dispatch, state: { status, isMetamaskInstalled, wallet, balance }, } = useMetamask();
     const [play, setPlay] = useState(false)
     const handleConnect = async () => {
@@ -35,7 +37,8 @@ const Intro = (props: Props) => {
                         setPlay(false)
                       }, 3000)
                 } else {
-                    window.location.href = "/main"
+                    router.push('/main');
+                    //window.location.href = "/main"
                 }
             } catch (e) {
                 console.log(e);

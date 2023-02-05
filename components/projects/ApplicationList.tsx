@@ -74,7 +74,7 @@ const ApplicationList = (props: Props) => {
                             </div>
                             <div className="px-4 w-full flex justify-center my-2" onClick={(e) => {
                                 e.stopPropagation()
-                                window.location.href = `/applications/shop-plugin/${application.uid}/manage`
+                                router.push(`/applications/shop-plugin/${application.uid}/manage`);
                             }}>
                                 <p className="bg-transparent border border-ramppblue text-ramppblue hover:bg-ramppblue hover:text-white text-base px-6 py-1 rounded-md cursor-pointer">Manage Plugin</p>
                             </div>

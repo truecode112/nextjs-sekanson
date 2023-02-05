@@ -38,13 +38,13 @@ const HomeNavbar = (props: Props) => {
 
             // we can register an event listener for changes to the users wallet
             listen();
-            window.location.href = "/my/projects"
+            router.push('/my/projects');
         }
     };
 
     const handleGoToDashboard = async () => {
         dispatch({ type: "loading" });
-        window.location.href = "/my/projects"
+        router.push('/my/projects');
     };
     const [isMenuOpened, setIsMenuOpened] = useState(false)
 

@@ -1,12 +1,12 @@
-import Hero from "../components/Hero";
-import PartnersAndFounders from "../components/PartnersAndFounders";
-import FAQ from "../components/FAQ";
-import WhySekanson from "../components/WhySekanson";
-import SekansonRecipes from "../components/SekansonRecipes";
-import WhoisSekanson from "../components/WhoisSekanson";
-import BaseLayout from "../components/BaseLayout";
+import Hero from "../../components/Hero";
+import PartnersAndFounders from "../../components/PartnersAndFounders";
+import FAQ from "../../components/FAQ";
+import WhySekanson from "../../components/WhySekanson";
+import SekansonRecipes from "../../components/SekansonRecipes";
+import WhoisSekanson from "../../components/WhoisSekanson";
+import BaseLayout from "../../components/BaseLayout";
 
-export default function Home() {
+export default function Main() {
   return (
     <BaseLayout>
       <Hero />

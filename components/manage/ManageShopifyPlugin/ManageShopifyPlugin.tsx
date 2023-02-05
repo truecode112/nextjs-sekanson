@@ -9,10 +9,12 @@ import ShopifyStoreSettingsAccordion from './ShopifyStoreSettingsAccordion';
 import { FormikContextType, useFormikContext } from 'formik';
 import { ApplicationType } from '../../../types/applications';
 import LoadingMessage from './LoadingMessage';
+import { useRouter } from 'next/router';
 
 type Props = {}
 
 const ManageShopifyPlugin = (props: Props) => {
+    const router = useRouter();
     const formik: FormikContextType<ApplicationType> = useFormikContext()
     const { validationError } = useManageShopifyPluginContext()
 
@@ -24,7 +26,7 @@ const ManageShopifyPlugin = (props: Props) => {
                         <button
                             onClick={() => {
                                 if (typeof window !== "undefined") {
-                                    window.location.href = "/my/projects"
+                                    router.push('/my/projects');
                                 }
                             }}
                             className="text-blue-500 underline text-base"
