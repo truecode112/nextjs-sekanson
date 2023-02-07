@@ -1,0 +1,24 @@
+name: Sekanson CD
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Deploy using ssh
+      uses: appleboy/ssh-action@main
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.PRIVATE_KEY }}
+        port: 22
+        scripts: |
+          cd /root/work/nextjs-sekanson
+          git pull origin main
+          git status
+          npm run build
+          npm run export
+          sudo rm -Rf /var/www/html/out
+          sudo cp -R out /var/www/html/
