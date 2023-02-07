@@ -54,7 +54,7 @@ const Hero = (props: Props) => {
                                 " text-4xl md:text-5xl mb-6 w-full md:w-2/3 mx-auto text-center !font-bold text-gray-800 font-YesevaOne"
                             )}
                         >
-                            Build better NFT11 communities without code.
+                            Build better NFT1 communities without code.
                         </h1>
                         <p className="text-lg md:text-md text-center text-gray-600 w-full md:w-2/3 mx-auto">
                             Sekanson has all the tools to help you launch and grow your NFT
