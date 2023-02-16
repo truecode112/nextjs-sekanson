@@ -23,8 +23,8 @@ const ProjectDetailPage: NextPage = () => {
                 className="fixed w-screen h-screen top-0"
                 style={{
                     zIndex: -1,
-                    opacity: 0.75,
-                    backgroundImage: "url(/images/bg.svg)",
+                    opacity: 1,
+                    backgroundColor: "black"
                 }}
             >
             </div>

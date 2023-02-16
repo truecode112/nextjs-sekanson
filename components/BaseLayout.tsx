@@ -52,7 +52,8 @@ const BaseLayout = ({ children }: LayoutProps) => {
                     </Head>
                     <main className={
                         clsx(
-                            "font-mono bg-white relative h-screen z-0 overflow-scroll",
+                            "font-mono bg-black relative h-screen z-0",
+                            "matrix_asset"
                             )
                         }
                         >
@@ -62,7 +63,7 @@ const BaseLayout = ({ children }: LayoutProps) => {
                         <div className="min-h-[70vh] flex flex-col items-center">
                             {children}
                         </div>
-                        <Footer />
+                        {/*<Footer />*/}
                     </main>
                 </div>
             }

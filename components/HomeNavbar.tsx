@@ -169,7 +169,7 @@ const HomeNavbar = (props: Props) => {
 
     return (
         <div>
-            <header className="h-16 bg-white md:h-20 flex justify-center items-center z-30 w-full overflow-visible border-b-2 border-gray-100">
+            <header className="h-16 md:h-20 flex justify-center items-center z-30 w-full overflow-visible border-b-2 border-gray-100">
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <div className="dark:text-white flex gap-x-6 items-center">
                         <Link href="/">
@@ -186,20 +186,20 @@ const HomeNavbar = (props: Props) => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <div className="flex gap-x-2 items-center hover:bg-gray-50 rounded-lg p-2">
+                            {/*<div className="flex gap-x-2 items-center hover:bg-gray-50 rounded-lg p-2">
                                 <p className="text-2xl">🎉</p>
                                 <div className=" flex flex-col">
                                     <p className="text-gray-500 text-sm">
                                         Sekanson Pro now only <b>$12.00 per month</b>!
                                     </p>
                                 </div>
-                            </div>
+                            </div>*/}
                         </a>
                     </div>
 
                     <div className="flex items-center">
                         <nav className="text-gray-800 dark:text-white text-md  space-x-8 items-center hidden lg:flex">
-                            <a
+                            {/*<a
                                 href="https://trusting-lungfish-ebb.notion.site/Sekanson-FAQ-s-91f5d2700d764031a44c064ed49f8aec"
                                 target="_blank"
                                 rel="noreferrer"
@@ -207,7 +207,7 @@ const HomeNavbar = (props: Props) => {
                             >
                                 FAQ
                             </a>
-                            <ToolsPopupMenu />
+                        <ToolsPopupMenu />*/}
                             <a
                                 href="https://twitter.com/@sekansonnft"
                                 target="_blank"
@@ -276,12 +276,7 @@ const HomeNavbar = (props: Props) => {
 
                 </div>
             </header>
-            <div className={
-                clsx(
-                    "fixed opacity-0 flex justify-center z-30 w-full transition duration-200 ease-in-out justify-center bg-white rounded-lg",
-                    isMenuOpened ? "opacity-100" : "opacity-0"
-                )
-            }>
+            <div >
                 <div className="flex flex-col text-xl space-y-4 items-baseline">
                     <a
                         href="https://twitter.com/@sekansonnft"

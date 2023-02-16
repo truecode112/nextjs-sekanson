@@ -10,11 +10,11 @@ export default function Main() {
   return (
     <BaseLayout>
       <Hero />
-      <PartnersAndFounders />
+      {/*<PartnersAndFounders />
       <WhySekanson />
       <WhoisSekanson />
       <SekansonRecipes />
-      <FAQ />
+      <FAQ />*/}
     </BaseLayout>
   );
 }

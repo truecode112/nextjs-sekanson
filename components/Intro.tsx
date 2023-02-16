@@ -62,14 +62,14 @@ const Intro = (props: Props) => {
             <div className="intro_bg">
                     {play == true ? (
                         <Image 
-                            src="/images/intro_piece.gif"
+                            src="/images/intro_still.gif"
                             className="intro_piece_center"
                             width={147}
                             height={170}
                             alt=""/>
                     ) : (
                         <Image
-                            src="/images/intro_piece_still.gif"
+                            src="/images/intro_piece.png"
                             className="intro_piece_center"
                             alt=""
                             width={147}

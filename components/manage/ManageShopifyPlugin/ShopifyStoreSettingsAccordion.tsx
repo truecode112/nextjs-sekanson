@@ -60,7 +60,7 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                         </svg>
                     )}
                     
-                    <h2 className="font-semibold text-xl text-gray-800">
+                    <h2 className="font-semibold text-xl text-white  hover:text-black">
                         Shopify Store Settings
                     </h2>
                 </div>
@@ -96,8 +96,8 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                             className={clsx(
                                 "cursor-pointer text-lg ",
                                 activeTab === 0
-                                    ? "text-ramppblue underline"
-                                    : "text-gray-400  hover:text-ramppblue"
+                                    ? "text-white underline"
+                                    : "text-white  hover:text-ramppblue"
                             )}
                         >
                             Advanced Setup
@@ -108,8 +108,8 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                             className={clsx(
                                 "cursor-pointer text-lg ",
                                 activeTab === 1
-                                    ? "text-ramppblue underline"
-                                    : "text-gray-400  hover:text-ramppblue"
+                                    ? "text-white underline"
+                                    : "text-white  hover:text-ramppblue"
                             )}
                         >
                             Basic Setup
@@ -117,13 +117,13 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                     </div>
                     {activeTab === 0 ? (
                         <>
-                            <p className="text-sm my-2 text-gray-600">
+                            <p className="text-sm my-2 text-white">
                                 Advanced setup will create a <u>unique</u> discount per validation
                                 for wallet that expires 15 minutes from creation.
                             </p>
                             <div className="relative w-3/4 my-4">
-                                <label className="text-gray-500">Minimum Token/NFT balance</label>
-                                <p className="text-xs text-gray-500">
+                                <label className="text-white">Minimum Token/NFT balance</label>
+                                <p className="text-xs text-white">
                                     This is the minimum amount of NFTs/Tokens you want holders to
                                     hold in order to be able to receive the discount code.
                                 </p>
@@ -152,8 +152,8 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                     ) : (
                         <div>
                             <div className="relative w-3/4 my-4">
-                                <label className="text-gray-500">Minimum Token/NFT balance</label>
-                                <p className="text-xs text-gray-500">
+                                <label className="text-white">Minimum Token/NFT balance</label>
+                                <p className="text-xs text-white">
                                     This is the minimum amount of NFTs/Tokens you want holders to
                                     hold in order to be able to receive the discount code.
                                 </p>
@@ -179,10 +179,10 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                                 )}
                             </div>
                             <div className="relative w-3/4 my-4">
-                                <label htmlFor="discountCode" className="text-gray-500">
+                                <label htmlFor="discountCode" className="text-white">
                                     Shopify Discount Code
                                 </label>
-                                <p className="text-xs text-gray-500">
+                                <p className="text-xs text-white">
                                     This is the discount code from your Shopify store you wish to
                                     apply to holders who pass verification.
                                 </p>
@@ -201,7 +201,7 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                                     href="https://docs.rampp.xyz/rampp-apps-faq/shopify-token-discount-plugin/advanced-setup-vs-basic-setup/basic-setup-faq/how-to-generate-a-discount-code"
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="underline text-blue-500 text-xs"
+                                    className="underline text-white text-xs"
                                 >
                                     How do I set a discount code on Shopify?
                                 </a>
@@ -210,10 +210,10 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                     )}
                 </div>
                 <div className="relative w-3/4 my-4">
-                    <label htmlFor="shopURL" className="text-gray-500">
+                    <label htmlFor="shopURL" className="text-white">
                         Store Admin URL
                     </label>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-white">
                         This is the base url in which you administrate your store from.
                     </p>
                     <Field
@@ -240,10 +240,10 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
 
                 </div>
                 <div className="relative w-3/4 my-4">
-                    <label htmlFor="shopifyAccessToken" className="text-gray-500">
+                    <label htmlFor="shopifyAccessToken" className="text-white">
                         Shopify Admin Access Token
                     </label>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-white">
                         This is the admin access token for a custom app on your store that we will
                         use to create new discount codes dynamically. This key is
                         encrypted before storing.
@@ -273,17 +273,17 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                         href="https://docs.rampp.xyz/rampp-apps-faq/shopify-token-discount-plugin/advanced-setup-vs-basic-setup/advanced-setup-faq/how-to-create-a-shopify-app-key"
                         target="_blank"
                         rel="noreferrer"
-                        className="underline text-blue-500 text-xs"
+                        className="underline text-white text-xs"
                     >
                         Learn how to get this API key easily.
                     </a>
                 </div>
 
                 <div className="relative w-3/4 my-4">
-                    <label htmlFor="shopifyAPIKey" className="text-gray-500">
+                    <label htmlFor="shopifyAPIKey" className="text-white">
                         Shopify App API Key
                     </label>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-white">
                         This is the api key for a custom app on your store that we will
                         use to create new discount codes dynamically. This key is
                         encrypted before storing.
@@ -313,16 +313,16 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                         href="https://docs.rampp.xyz/rampp-apps-faq/shopify-token-discount-plugin/advanced-setup-vs-basic-setup/advanced-setup-faq/how-to-create-a-shopify-app-key"
                         target="_blank"
                         rel="noreferrer"
-                        className="underline text-blue-500 text-xs"
+                        className="underline text-white text-xs"
                     >
                         Learn how to get this API key easily.
                     </a>
                 </div>
                 <div className="relative w-3/4 my-4">
-                    <label htmlFor="shopifyAPIKey" className="text-gray-500">
+                    <label htmlFor="shopifyAPIKey" className="text-white">
                         Shopify App Secret Key
                     </label>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-white">
                         This is the secret key for a custom app on your store that we will
                         use to create new discount codes dynamically. This key is
                         encrypted before storing.
@@ -352,16 +352,16 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                         href="https://docs.rampp.xyz/rampp-apps-faq/shopify-token-discount-plugin/advanced-setup-vs-basic-setup/advanced-setup-faq/how-to-create-a-shopify-app-key"
                         target="_blank"
                         rel="noreferrer"
-                        className="underline text-blue-500 text-xs"
+                        className="underline text-white text-xs"
                     >
                         Learn how to get this Secret key easily.
                     </a>
                 </div>
                 <div className="relative w-3/4 my-4">
-                    <label htmlFor="priceRuleId" className="text-gray-500">
+                    <label htmlFor="priceRuleId" className="text-white">
                         Discount Price Rule ID
                     </label>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-white">
                         This is the template discount Mintplex will use when creating
                         discount codes for holders.
                     </p>
@@ -390,7 +390,7 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                         href="https://docs.rampp.xyz/rampp-apps-faq/shopify-token-discount-plugin/advanced-setup-vs-basic-setup/advanced-setup-faq/how-to-generate-a-price-rule-id"
                         target="_blank"
                         rel="noreferrer"
-                        className="underline text-blue-500 text-xs"
+                        className="underline text-white text-xs"
                     >
                         How to setup a price rule on Shopify
                     </a>

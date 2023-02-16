@@ -29,7 +29,7 @@ const ManageShopifyPlugin = (props: Props) => {
                                     router.push('/my/projects');
                                 }
                             }}
-                            className="text-blue-500 underline text-base"
+                            className="text-white underline text-base"
                         >
                             ← Dashboard
                         </button>
@@ -40,10 +40,10 @@ const ManageShopifyPlugin = (props: Props) => {
                         id="t28f06b82-fc74-4fd8-8ad3-b6d0303fab79"
                         data-id="tooltip"
                     ></div>
-                    <h1 className="text-2xl text-gray-800">
+                    <h1 className="text-2xl text-white">
                         Configure the plugin for your store
                     </h1>
-                    <p className="text-base text-gray-600 my-2">
+                    <p className="text-base text-white my-2">
                         Modify the settings below to change the presentation of the banner
                         that will go on your store.
                     </p>
@@ -55,7 +55,7 @@ const ManageShopifyPlugin = (props: Props) => {
                     < >
                         {
                             (formik.isSubmitting ? (
-                                <button className="px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-gray-600 text-gray-500 hover:bg-gray-300 hover:text-gray-600">
+                                <button className="px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-gray-600 text-white hover:bg-gray-300 hover:text-gray-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="animate-spin h-6">
                                         <line x1="12" y1="2" x2="12" y2="6"></line>
                                         <line x1="12" y1="18" x2="12" y2="22"></line>
@@ -100,7 +100,7 @@ const ManageShopifyPlugin = (props: Props) => {
                                         <p>{validationError.message}</p>
                                     </button>
                                 ) : (
-                                    <button disabled={!(formik.isInitialValid || formik.isValid)} className="submit-project px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-gray-600 text-gray-500 hover:bg-gray-300 hover:text-gray-600">
+                                    <button disabled={!(formik.isInitialValid || formik.isValid)} className="submit-project px-6 py-1 flex space-x-2 items-center rounded-md bg-transparent border border-gray-600 text-white hover:bg-gray-300 hover:text-gray-600">
                                         <p> Submit</p>
                                     </button>
                                 ))

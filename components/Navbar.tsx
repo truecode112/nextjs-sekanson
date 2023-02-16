@@ -401,7 +401,7 @@ const Navbar = (props: Props) => {
         const [isActive, setIsActive] = useState(false)
         return (
             <div className="relative inline-block text-left">
-                <div onClick={() => setIsActive(prev => !prev)} className="flex items-center space-x-1 hover:bg-gray-200 p-2 cursor-pointer rounded-lg">
+                <div onClick={() => setIsActive(prev => !prev)} className="flex items-center space-x-1 text-white hover:bg-gray-200 hover:text-black p-2 cursor-pointer rounded-lg">
                     <div className="flex">
                         <div
                             style={{
@@ -443,7 +443,7 @@ const Navbar = (props: Props) => {
                             </svg>
                         </div>
                     </div>
-                    <p className="text-gray-900 text-base font-semibold">
+                    <p className="text-base font-semibold">
                         {truncateAddress(wallet || "")}
                     </p>
                 </div>
@@ -594,13 +594,13 @@ const Navbar = (props: Props) => {
 
     return (
         <div>
-            <header className="h-16 bg-white md:h-20 flex justify-center items-center z-30 w-full overflow-visible border-b-2 border-gray-100">
+            <header className="h-16 md:h-20 flex justify-center items-center z-30 w-full overflow-visible border-gray-100">
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <div className="dark:text-white flex gap-x-6 items-center">
                         <Link href="/my/projects">
                             <img
-                                src="/android-chrome-512x512.png"
-                                className="h-12"
+                                src="/images/intro_mark.png"
+                                className="h-16"
                                 alt="sekanson.xyz"
                             />
                         </Link>
@@ -609,14 +609,14 @@ const Navbar = (props: Props) => {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            <div className="flex gap-x-2 items-center hover:bg-gray-50 rounded-lg p-2">
+                            {/*<div className="flex gap-x-2 items-center hover:bg-gray-50 rounded-lg p-2">
                                 <p className="text-2xl">🎉</p>
                                 <div className=" flex flex-col">
                                     <p className="text-gray-500 text-sm">
                                         Sekanson Pro now only <b>$12.00 per month</b>!
                                     </p>
                                 </div>
-                            </div>
+                            </div>*/}
                         </a>
                     </div>
                     {
@@ -638,8 +638,7 @@ const Navbar = (props: Props) => {
                                                 strokeLinejoin="round"
                                                 className={
                                                     clsx(
-                                                        "h-4 w-4 text-gray-600",
-                                                        balance !== null && "text-green-500"
+                                                        "h-4 w-4 text-white"
                                                     )
                                                 }
                                             >
@@ -647,8 +646,7 @@ const Navbar = (props: Props) => {
                                             </svg>
                                             <p className={
                                                 clsx(
-                                                    "text-base text-gray-600",
-                                                    balance !== null ? "text-green-400" : "text-gray-600"
+                                                    "text-base text-white"
                                                 )
                                             }>{web3.utils.fromWei(balance || "", 'ether')}</p>
                                         </div>
@@ -695,7 +693,7 @@ const Navbar = (props: Props) => {
                                     </div>
                                 </div>  */}
                                         <ChainSelectMenu />
-                                        <a
+                                        {/*<a
                                             href="https://trusting-lungfish-ebb.notion.site/Sekanson-FAQ-s-91f5d2700d764031a44c064ed49f8aec"
                                             target="_blank"
                                             rel="noreferrer"
@@ -703,7 +701,7 @@ const Navbar = (props: Props) => {
                                         >
                                             Support
                                         </a>
-                                        <ToolsWithExtraPopupMenu />
+                                        <ToolsWithExtraPopupMenu />*/}
 
                                         <ProfilePopupMenu />
                                     </nav>
@@ -715,8 +713,8 @@ const Navbar = (props: Props) => {
                                 </div>
                             ) : (
                                 <div className="flex items-center">
-                                    <nav className="text-gray-800 dark:text-white text-md  space-x-8 items-center hidden lg:flex">
-                                        <a
+                                    <nav className="text-white text-white dark:text-white text-md  space-x-8 items-center hidden lg:flex">
+                                        {/*<a
                                             href="https://trusting-lungfish-ebb.notion.site/Sekanson-FAQ-s-91f5d2700d764031a44c064ed49f8aec"
                                             target="_blank"
                                             rel="noreferrer"
@@ -724,7 +722,7 @@ const Navbar = (props: Props) => {
                                         >
                                             FAQ
                                         </a>
-                                        <ToolsPopupMenu />
+                                        <ToolsPopupMenu />*/}
                                         <a
                                             href="https://twitter.com/@sekansonnft"
                                             target="_blank"
@@ -735,7 +733,7 @@ const Navbar = (props: Props) => {
                                         {showConnectButton && (
                                             <button
                                                 onClick={handleConnect}
-                                                className="py-1 px-2 flex items-center gap-x-2 text-ramppblue hover:text-white border-2 border-ramppblue rounded-md hover:bg-ramppdeepblue"
+                                                className="py-1 px-2 flex items-center gap-x-2 text-white hover:text-white border-2 border-ramppwhite rounded-md hover:bg-ramppblack"
                                             >
                                                 {status === "loading" && (
                                                     // <svg
@@ -794,22 +792,13 @@ const Navbar = (props: Props) => {
 
                 </div>
             </header>
-            <div className={
+            {/*<div className={
                 clsx(
                     "fixed opacity-0 flex justify-center z-30 w-full transition duration-200 ease-in-out justify-center bg-white rounded-lg",
                     isMenuOpened ? "opacity-100" : "opacity-0"
                 )
             }>
-                <div className="flex flex-col text-xl space-y-4 items-baseline">
-                    <a
-                        href="https://twitter.com/@sekansonnft"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Twitter
-                    </a>
-                </div>
-            </div>
+            </div>*/}
         </div>
     );
 };

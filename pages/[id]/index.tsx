@@ -24,7 +24,6 @@ const ProjectDetailPage: NextPage = () => {
                 style={{
                     zIndex: -1,
                     opacity: 0.75,
-                    backgroundImage: "url(/images/bg.svg)",
                 }}
             >
             </div>

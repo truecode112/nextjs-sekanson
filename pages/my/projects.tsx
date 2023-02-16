@@ -79,7 +79,6 @@ const Projects = (props: Props) => {
                 style={{
                     zIndex: -1,
                     opacity: 0.75,
-                    backgroundImage: "url(/images/bg.svg)",
                 }}
             >
                 {/* <Image src="/images/bg.svg" alt={"bg-project"} /> */}
@@ -88,7 +87,7 @@ const Projects = (props: Props) => {
 
             <div className="container mx-auto px-6 flex-col my-8 w-full">
                 <div className="flex space-x-8 items-center">
-                    <h1 className="text-4xl text-gray-800 font-black pb-2 ff">
+                    <h1 className="text-4xl text-white font-black pb-2 ff">
                         Your projects
                     </h1>
                     <div className="flex space-x-2 my-4">
@@ -113,9 +112,9 @@ const Projects = (props: Props) => {
                             }
                             <p className="text-base text-white font-black">New project +</p>
                         </div>
-                        <Link href="/import-contract">
+                        {/*<Link href="/import-contract">
                             <div className="flex items-center space-x-1 py-2 px-4 rounded-lg cursor-pointer border border-gray-800 text-gray-800 hover:text-white hover:bg-gray-800">
-                                <p className="text-base font-black">Import smart contract</p>
+                                <p className="text-base font-black text-white">Import smart contract</p>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -133,7 +132,7 @@ const Projects = (props: Props) => {
                                     <line x1="12" y1="15" x2="12" y2="3"></line>
                                 </svg>
                             </div>
-                        </Link>
+                        </Link>*/}
                     </div>
                 </div>
                 <div className="w-full flex flex-wrap gap-x-4 gap-y-4">

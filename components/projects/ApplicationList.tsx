@@ -87,7 +87,7 @@ const ApplicationList = (props: Props) => {
     return (
         <div className='w-full my-4'>
             <div className="flex justify-between items-center">
-                <h1 className="text-4xl text-gray-800 font-black pb-2 ff">Your applications</h1>
+                <h1 className="text-4xl text-white font-black pb-2 ff">Your applications</h1>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5">
                 {

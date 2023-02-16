@@ -15,7 +15,7 @@ const networkChains: Array<{ id: ChainId, name: string, src: string, className: 
         name: "Ethereum",
         src: "/images/eth-logo.svg",
         className: "border-gray-300  border hover:border-gray-700 text-gray-300 hover:text-gray-700",
-        activeClass: "bg-gray-100 text-gray-700 border-gray-700",
+        activeClass: "border-white-700 bg-indigo-100 text-indigo-700",
     },
     {
         id: ChainId.Polygon,
@@ -78,7 +78,7 @@ const ProjectDetail = (props: Props) => {
                             }}
                             className={
                                 clsx(
-                                    "w-auto flex justify-center items-center space-x-4 p-4 bg-transparent rounded-lg cursor-pointer border ",
+                                    "w-auto flex justify-center text-white items-center space-x-4 p-4 bg-transparent rounded-lg cursor-pointer border ",
                                     JSON.stringify(selectedNetwork) === JSON.stringify(networkChain) ? networkChain.activeClass : ""
                                 )
                             }>
@@ -99,11 +99,11 @@ const ProjectDetail = (props: Props) => {
 
     return (
         <section className="flex w-11/12 py-10">
-            <div className="w-1/3 h-full">
+            <div className="w-1/3 h-full mt-16">
                 <img
-                    src="/android-chrome-192x192.png"
+                    src="/images/skull.png"
                     alt="thirdweb Logo"
-                    width={135}
+                    width={300}
                 />
             </div>
             <div className="w-2/3 flex flex-col relative">
@@ -112,7 +112,7 @@ const ProjectDetail = (props: Props) => {
                         className="w-fit flex items-center space-x-2 cursor-pointer"
                         data-tip="This is the network that you contract will be deployed on. This cannot be changed after deployment"
                     >
-                        <label className="text-base font-black uppercase text-gray-500">
+                        <label className="text-base font-black uppercase text-white">
                             Network
                         </label>
                         <svg
@@ -125,7 +125,7 @@ const ProjectDetail = (props: Props) => {
                             strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            className="h-4 w-4 text-gray-500"
+                            className="h-4 w-4 text-white"
                         >
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="12" y1="16" x2="12" y2="12"></line>
@@ -139,11 +139,11 @@ const ProjectDetail = (props: Props) => {
                 <div className="relative w-3/4 md:w-1/2 my-4">
                     <label
                         htmlFor="productionContractAddress"
-                        className="text-gray-500"
+                        className="text-white"
                     >
                         Contract address
                     </label>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-white">
                         This is the contract address of your live contract.
                     </p>
                     <input

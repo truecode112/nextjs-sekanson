@@ -94,8 +94,8 @@ const Manage = (props: Props) => {
                 className="fixed w-screen h-screen top-0"
                 style={{
                     zIndex: -1,
-                    opacity: 0.75,
-                    backgroundImage: "url(/images/bg.svg)",
+                    opacity: 1,
+                    backgroundColor: "black",
                 }}
             >
                 {/* <Image src="/images/bg.svg" alt={"bg-project"} /> */}

@@ -77,7 +77,7 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                             }}
                             className={
                                 clsx(
-                                    "w-auto flex justify-center items-center space-x-4 p-4 bg-transparent rounded-lg cursor-pointer border ",
+                                    "w-auto flex justify-center items-center space-x-4 p-4 bg-transparent rounded-lg cursor-pointer border"
                                     // JSON.stringify(selectedNetwork) === JSON.stringify(networkChain) ? networkChain.activeClass : ""
                                 )
                             }>
@@ -134,7 +134,7 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                             <polyline points="22 4 12 14.01 9 11.01"></polyline>
                         </svg>
                     )}
-                    <h2 className="font-semibold text-xl text-gray-800">
+                    <h2 className="font-semibold text-xl text-white hover:text-black">
                         Plugin Contract Settings
                     </h2>
                 </div>
@@ -163,8 +163,8 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                 )}
             >
                 <div className="relative w-3/4 my-4">
-                    <label className="text-gray-500">Blockchain</label>
-                    <p className="text-xs text-gray-500">
+                    <label className="text-white">Blockchain</label>
+                    <p className="text-xs text-white">
                         Select the blockchain of where your contract is deployed. This
                         contract must exist.
                     </p>
@@ -202,7 +202,7 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                                         handleChange(networkChain.name.toLowerCase())
                                     }}
                                     className={clsx(
-                                        "w-auto flex justify-center items-center space-x-4 p-4 bg-transparent rounded-lg cursor-pointer border ",
+                                        "w-auto flex justify-center items-center space-x-4 p-4 bg-transparent rounded-lg cursor-pointer border text-white",
                                         JSON.stringify(formik.values.network?.toLowerCase()) === JSON.stringify(networkChain.name.toLowerCase())
                                             ? networkChain.activeClass
                                             : ""
@@ -216,10 +216,10 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                     </div>
                 </div>
                 <div className="relative w-3/4 my-4">
-                    <label htmlFor="url" className="text-gray-500">
+                    <label htmlFor="url" className="text-white">
                         Store URL
                     </label>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-white">
                         This is the URL of your shopify store people shop on.
                     </p>
                     <Field
@@ -245,8 +245,8 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                     )}
                 </div>
                 <div className="relative w-3/4 my-4 flex flex-col">
-                    <label className="text-gray-500">Contract Type</label>
-                    <p className="text-xs text-gray-500">
+                    <label className="text-white">Contract Type</label>
+                    <p className="text-xs text-white">
                         Mintplex supports ERC-721, ERC-1155, and ERC-20 contracts.
                     </p>
                     <Field
@@ -265,10 +265,10 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                     </Field>
                 </div>
                 <div className="relative w-3/4 my-4">
-                    <label htmlFor="testnetContractAddress" className="text-gray-500">
+                    <label htmlFor="testnetContractAddress" className="text-white">
                         Testnet Contract address
                     </label>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-white">
                         This is the contract address of your contract on a testnet
                         (Goerli, Mumbai, etc). This is so you can test out the Mintplex
                         Shopify Plugin without having to deploy a mainnet contract.
@@ -288,11 +288,11 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                 <div className="relative w-3/4 my-4">
                     <label
                         htmlFor="productionContractAddress"
-                        className="text-gray-500"
+                        className="text-white"
                     >
                         Production Contract address
                     </label>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-white">
                         This is the contract address of your live contract.
                     </p>
                     <Field

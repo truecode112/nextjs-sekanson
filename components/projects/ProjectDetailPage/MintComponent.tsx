@@ -252,8 +252,8 @@ const MintComponent = (props: Props) => {
                                 className="w-fit flex items-center space-x-2  cursor-pointer my-2"
                                 data-tip="This is the network that you contract will be deployed on. This cannot be changed after deployment"
                             >
-                                <label className="text-base font-black uppercase text-gray-500">
-                                    Quantity 1
+                                <label className="text-base font-black uppercase text-white">
+                                    Quantity
                                 </label>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -265,7 +265,7 @@ const MintComponent = (props: Props) => {
                                     strokeWidth="2"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                    className="h-4 w-4 text-gray-500"
+                                    className="h-4 w-4 text-white"
                                 >
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <line x1="12" y1="16" x2="12" y2="12"></line>

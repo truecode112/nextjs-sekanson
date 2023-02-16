@@ -126,6 +126,8 @@
 .intro_piece_center{
   display: block;
   margin: auto;
+  height:100vh;
+  width:100%;
   top: 0;
   left: 0;
   right: 0;
@@ -146,8 +148,28 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: center;
-  width: 120px;
-  height: 30px;
+  width: 240px;
+  height: 60px;
+}
+
+.matrix_asset {
+  background-image: url('/images/Matrix_Asset.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skull_asset {
+  background-image: url('/images/skull.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  position:absolute;
 }
 
 /* @media (prefers-color-scheme: dark) {

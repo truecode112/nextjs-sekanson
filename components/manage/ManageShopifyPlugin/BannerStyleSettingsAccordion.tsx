@@ -17,7 +17,7 @@ const BannerStyleSettingsAccordion = (props: Props) => {
                 className="flex items-center justify-between hover:bg-gray-100 rounded-lg py-2 mt-8 cursor-pointer"
             >
                 <div className="flex space-x-2 items-center">
-                    <h2 className="font-semibold text-xl text-gray-800">
+                    <h2 className="font-semibold text-xl text-white hover:text-black">
                         Banner Style Settings
                     </h2>
                 </div>
@@ -45,7 +45,7 @@ const BannerStyleSettingsAccordion = (props: Props) => {
                     active ? "block" : "hidden"
                 )}
             >
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-white">
                     This is the default text of your banner when it loads
                 </p>
                 <Field
@@ -61,7 +61,7 @@ const BannerStyleSettingsAccordion = (props: Props) => {
                     placeholder="Get 50% off your purchase!"
                 />
                 <div className="relative w-3/4 my-4">
-                    <label className="text-gray-500">&apos;Call to Action&apos; Text Color</label>
+                    <label className="text-white">&apos;Call to Action&apos; Text Color</label>
                     <ColorPickerInput value={application.ctaTextColor || ""} handleChange={(val) => {
                         handleChangeApplication({ type: "ctaTextColor", value: val })
 
@@ -69,7 +69,7 @@ const BannerStyleSettingsAccordion = (props: Props) => {
                 </div>
                 <div className="relative w-3/4 my-4">
 
-                    <label className="text-gray-500">Banner Background Color</label>
+                    <label className="text-white">Banner Background Color</label>
                     <ColorPickerInput value={application.bannerBgColor || ""} handleChange={(val) => {
                         handleChangeApplication({ type: "bannerBgColor", value: val })
                     }} />

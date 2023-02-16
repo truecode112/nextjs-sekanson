@@ -22,7 +22,7 @@ const LoadingMessage = (props: Props) => {
     return (
         <div>
 
-            <p className="my-2 text-gray-400 text-sm">
+            <p className="my-2 text-white text-sm">
                 {loadingText}
             </p>
 

@@ -96,7 +96,7 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                 className="flex items-center justify-between hover:bg-gray-100 rounded-lg py-2 mt-8 cursor-pointer"
             >
                 <div className="flex space-x-2 items-center">
-                    <h2 className="font-semibold text-xl text-gray-800">
+                    <h2 className="font-semibold text-xl text-white hover:text-black">
                         Get your embed script!
                     </h2>
                 </div>
@@ -152,8 +152,8 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                 </a>
                 <div className="w-full flex-col space-y-4 my-4">
                     <div className="flex-col space-y-1">
-                        <p className="text-gray-600 text-lg">{getNetworkInfo(formik.values.network || "")?.testnet.chainName}</p>
-                        <p className="text-gray-600 text-xs">
+                        <p className="text-white text-lg">{getNetworkInfo(formik.values.network || "")?.testnet.chainName}</p>
+                        <p className="text-white text-xs">
                             Copy this embed HTML code into your shop to allow people to
                             verify their holdings on the {getNetworkInfo(formik.values.network || "")?.testnet.chainName} network.
                         </p>
@@ -181,10 +181,10 @@ const GetYourEmbedScriptAccordion = (props: Props) => {
                 </div>
                 <div className="w-full flex-col space-y-4 my-4">
                     <div className="flex-col space-y-1 ">
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-white text-lg">
                             {getNetworkInfo(formik.values.network || "")?.mainnet.chainName}
                         </p>
-                        <p className="text-gray-600 text-xs">
+                        <p className="text-white text-xs">
                             Copy this embed HTML code into your shop to allow people to
                             verify their holdings on the {getNetworkInfo(formik.values.network || "")?.mainnet.chainName} network.
                         </p>
