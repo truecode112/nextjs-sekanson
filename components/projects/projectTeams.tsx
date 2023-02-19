@@ -76,7 +76,7 @@ const ProjectTeams = (props: Props) => {
                             <a
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://docs.rampp.xyz/rampp.xyz-documentation/guides/generating-a-contract/teams-and-permissions"
+                                href="https://docs.sekanson.com/shopify-nft-discount/"
                                 className="text-ramppblue underline font-semibold"
                             >
                                 Learn more about teams &amp; permissions →

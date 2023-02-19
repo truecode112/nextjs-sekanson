@@ -22,8 +22,8 @@ const ProjectIpfs = (props: Props) => {
                     Getting Started
                 </h1>
                 <p className="text-base text-gray-800 my-4">
-                    In the spirit of decentralization Mintplex wants you to still
-                    fully own your content. We want to ensure that even if Mintplex
+                    In the spirit of decentralization Sekanson wants you to still
+                    fully own your content. We want to ensure that even if Sekanson
                     disappears off the face of the Earth, that your project remains
                     online! To do that we are going to help you decentalize your
                     project fully with IPFS!

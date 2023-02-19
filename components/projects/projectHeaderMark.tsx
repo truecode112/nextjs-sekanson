@@ -100,7 +100,7 @@ const ProjectHeaderMark = (props: Props) => {
                         a custom ascii mark.
                     </p>
                     <a
-                        href="https://patorjk.com/software/taag/#p=display&amp;f=Slant&amp;t=My Mintplex Project"
+                        href="https://patorjk.com/software/taag/#p=display&amp;f=Slant&amp;t=My Sekanson Project"
                         target="_blank"
                         rel="noreferrer"
                         className="text-ramppblue underline hover:text-blue-600 cursor-pointer"

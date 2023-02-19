@@ -235,7 +235,7 @@ const ProjectSettings = (props: Props) => {
 
                         <input name="name" type="text"
                             className="my-2 w-fit outline-none order-transparent focus:border-transparent focus:ring-0 border-0 border-color-transparent text-gray-700 text-3xl font-black"
-                            autoComplete="off" placeholder="Your Project Name" defaultValue="My Mintplex Project"></input>
+                            autoComplete="off" placeholder="Your Project Name" defaultValue="My Sekanson Project"></input>
                     </div>
                     <div className="flex flex-col">
                         <div
@@ -268,7 +268,7 @@ const ProjectSettings = (props: Props) => {
                             className="my-2 w-fit outline-none order-transparent focus:border-transparent focus:ring-0 border-0 border-color-transparent text-gray-700 text-3xl font-black"
                             autoComplete="off"
                             placeholder="RAMPP"
-                            defaultValue="MINTPLEX"
+                            defaultValue="SEKANSON"
                         />
                     </div>
                     <div className="flex flex-col">

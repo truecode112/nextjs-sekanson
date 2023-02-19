@@ -64,7 +64,14 @@ const ApplicationList = (props: Props) => {
                             </svg>
                         </div>
                         <div className="w-full flex justify-between px-4 mb-4">
-                            <p className="bg-red-200 rounded-lg px-2 text-red-500 text-xs">requires setup</p>
+                            {application.productionContractAddress != '' ? (
+                                <p className="bg-green-200 rounded-lg px-2 text-green-500 text-xs">mainnet ready</p>
+                            ) : application.testnetContractAddress != '' ? (
+                                <p className="bg-yellow-200 rounded-lg px-2 text-yellow-500 text-xs">testnet ready</p>
+                            ) : (
+                                <p className="bg-red-200 rounded-lg px-2 text-red-500 text-xs">requires setup</p>
+                            )}
+                            
                             <p className="text-xs text-gray-300">
                             </p>
                         </div>

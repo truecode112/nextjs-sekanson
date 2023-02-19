@@ -600,4 +600,4 @@ export const getChainByChainId = (chainId: number) => {
     return chainData
 }
 
-export const SERVER_URL = "https://sekanson.com/slimprints";
+export const SERVER_URL = "https://sekanson.com/shopify";

@@ -76,7 +76,7 @@ const PinataSetup = (props: Props) => {
                     <br />
                     Need help generating your artwork? Take a look at
                     <a
-                        href="https://nft-inator.com/?ref=mintplex.xyz"
+                        href="https://nft-inator.com/?ref=sekanson.com"
                         rel="noreferrer"
                         target="_blank"
                         className="text-pink-600 underline"
@@ -120,7 +120,7 @@ const PinataSetup = (props: Props) => {
                 </div>
                 <div className="mt-10 flex-col space-y-4">
                     <p className="text-gray-800 text-lg font-semibold flex space-x-3">
-                        Provide Mintplex the CID
+                        Provide Sekanson the CID
                     </p>
                     <p className="text-gray-600">
                         After uploading the images you will be provided a
@@ -128,7 +128,7 @@ const PinataSetup = (props: Props) => {
                             CID
                         </code>
                         which is just a bunch of letter and numbers that tell the world how
-                        to find your images. Mintplex needs this to create your smart
+                        to find your images. Sekanson needs this to create your smart
                         contract!
                     </p>
                     <figure>
@@ -274,7 +274,7 @@ const PinataSetup = (props: Props) => {
                     </a>
                     <br />
                     <br />
-                    To get started, start uploading all your JSON files to Mintplex below.
+                    To get started, start uploading all your JSON files to Sekanson below.
                     Each file should match a token number - for example{" "}
                     <code className="bg-gray-300 text-pink-600 rounded-sm p-1">
                         1.png
@@ -291,7 +291,7 @@ const PinataSetup = (props: Props) => {
                 </p>
                 <div className="mt-4 flex-col space-y-4">
                     <p className="text-gray-600 text-lg font-semibold flex space-x-3">
-                        Upload Custom Metadata JSON files to Mintplex
+                        Upload Custom Metadata JSON files to Sekanson
                     </p>
                     <div className="flex w-full items-center justify-center bg-gray-lighter pb-6">
                         <label className="w-full flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-blue-500">
@@ -373,7 +373,7 @@ const PinataSetup = (props: Props) => {
                 </div>
                 <div className="mt-10 flex-col space-y-4">
                     <p className="text-gray-800 text-lg font-semibold flex space-x-3">
-                        Provide Mintplex the CID
+                        Provide Sekanson the CID
                     </p>
                     <p className="text-gray-600">
                         After uploading the images you will be provided a
@@ -381,7 +381,7 @@ const PinataSetup = (props: Props) => {
                             CID
                         </code>
                         which is just a bunch of letter and numbers that tell the world how
-                        to find your images. Mintplex needs this to create your smart
+                        to find your images. Sekanson needs this to create your smart
                         contract!
                     </p>
                     <figure>

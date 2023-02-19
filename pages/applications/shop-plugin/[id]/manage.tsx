@@ -86,32 +86,33 @@ const Manage = (props: Props) => {
 
     return (
         <BaseLayout>
-            <div className="fixed opacity-0 z-30 w-full transition duration-200 ease-in-out justify-center bg-white rounded-lg hidden">
-                <div className="flex-col items-baseline"></div>
+            <div className="container">
+                <div className="fixed opacity-0 z-30 w-full transition duration-200 ease-in-out justify-center bg-white rounded-lg hidden">
+                    <div className="flex-col items-baseline"></div>
+                </div>
+                <div
+                    id="mainbg"
+                    className="fixed w-screen h-screen top-0"
+                    style={{
+                        zIndex: -1,
+                        opacity: 0.75,
+                        backgroundImage: "url(/images/bg.svg)",
+                    }}
+                >
+                    {/* <Image src="/images/bg.svg" alt={"bg-project"} /> */}
+                </div>
+                <div className="w-full">
+                    {
+                        applicationData.uid && (
+                            <ManageShopifyPluginContextWrapper pluginData={{
+                                application: applicationData, loading: false
+                            }}>
+                                <ManageShopifyPlugin />
+                            </ManageShopifyPluginContextWrapper>
+                        )
+                    }
+                </div>
             </div>
-            <div
-                id="mainbg"
-                className="fixed w-screen h-screen top-0"
-                style={{
-                    zIndex: -1,
-                    opacity: 0.75,
-                    backgroundImage: "url(/images/bg.svg)",
-                }}
-            >
-                {/* <Image src="/images/bg.svg" alt={"bg-project"} /> */}
-            </div>
-            <div className="w-full">
-                {
-                    applicationData.uid && (
-                        <ManageShopifyPluginContextWrapper pluginData={{
-                            application: applicationData, loading: false
-                        }}>
-                            <ManageShopifyPlugin />
-                        </ManageShopifyPluginContextWrapper>
-                    )
-                }
-            </div>
-
         </BaseLayout >
     );
 };

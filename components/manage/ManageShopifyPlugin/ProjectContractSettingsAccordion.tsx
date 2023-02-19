@@ -247,7 +247,7 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                 <div className="relative w-3/4 my-4 flex flex-col">
                     <label className="text-gray-500">Contract Type</label>
                     <p className="text-xs text-gray-500">
-                        Mintplex supports ERC-721, ERC-1155, and ERC-20 contracts.
+                        Sekanson supports ERC-721, ERC-1155, and ERC-20 contracts.
                     </p>
                     <Field
                         as="select"
@@ -270,7 +270,7 @@ const ProjectContractSettingsAccordion = (props: Props) => {
                     </label>
                     <p className="text-xs text-gray-500">
                         This is the contract address of your contract on a testnet
-                        (Goerli, Mumbai, etc). This is so you can test out the Mintplex
+                        (Goerli, Mumbai, etc). This is so you can test out the Sekanson
                         Shopify Plugin without having to deploy a mainnet contract.
                     </p>
                     <Field

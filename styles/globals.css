@@ -124,13 +124,30 @@
 }
 
 .intro_piece_center{
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   position: absolute;
+}
+
+.intro_piece_text {
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+}
+
+.intro_layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .intro {
@@ -146,8 +163,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: center;
-  width: 120px;
-  height: 30px;
+  width: 180px;
+  height: 45px;
 }
 
 /* @media (prefers-color-scheme: dark) {

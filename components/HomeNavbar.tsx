@@ -10,6 +10,7 @@ import { useMetamask } from "../hooks/useMetamask";
 import { AllChains, getChainByChainId, getChainInfoByChainId } from "../libs/constants";
 import web3 from "../libs/getWeb3";
 import { hexToDecimal, truncateAddress } from "../utils/address";
+
 type Props = {};
 
 const HomeNavbar = (props: Props) => {
@@ -98,7 +99,7 @@ const HomeNavbar = (props: Props) => {
                             aria-labelledby="options-menu"
                         >
                             <Link
-                                href="https://nft-inator.com/?ref=sekanson.xyz"
+                                href="https://nft-inator.com/?ref=sekanson.com"
                                 rel="noreferrer"
                                 target="_blank"
                                 className="block px-4 py-2 text-md text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
@@ -172,17 +173,17 @@ const HomeNavbar = (props: Props) => {
             <header className="h-16 bg-white md:h-20 flex justify-center items-center z-30 w-full overflow-visible border-b-2 border-gray-100">
                 <div className="container mx-auto px-6 flex items-center justify-between">
                     <div className="dark:text-white flex gap-x-6 items-center">
-                        <Link href="/">
+                        <Link href="/main">
                             <picture>
                                 <img
                                     src="/android-chrome-512x512.png"
-                                    className="h-12"
-                                    alt="sekanson.xyz"
+                                    className="h-12 max-w-none"
+                                    alt="sekanson.com"
                                 />
                             </picture>
                         </Link>
                         <a
-                            href="https://twitter.com/sekansonnft/status/1603589091043332096"
+                            href="https://www.instagram.com/sekanson/"
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -190,7 +191,7 @@ const HomeNavbar = (props: Props) => {
                                 <p className="text-2xl">🎉</p>
                                 <div className=" flex flex-col">
                                     <p className="text-gray-500 text-sm">
-                                        Sekanson Pro now only <b>$12.00 per month</b>!
+                                        Dm Sekanson on instagram!
                                     </p>
                                 </div>
                             </div>
@@ -199,17 +200,16 @@ const HomeNavbar = (props: Props) => {
 
                     <div className="flex items-center">
                         <nav className="text-gray-800 dark:text-white text-md  space-x-8 items-center hidden lg:flex">
-                            <a
-                                href="https://trusting-lungfish-ebb.notion.site/Sekanson-FAQ-s-91f5d2700d764031a44c064ed49f8aec"
-                                target="_blank"
-                                rel="noreferrer"
+                            <Link
+                                href="#faq"
+                                scroll={true}
                                 className=""
                             >
                                 FAQ
-                            </a>
+                            </Link>
                             <ToolsPopupMenu />
                             <a
-                                href="https://twitter.com/@sekansonnft"
+                                href="https://twitter.com/thesekanson"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -284,7 +284,7 @@ const HomeNavbar = (props: Props) => {
             }>
                 <div className="flex flex-col text-xl space-y-4 items-baseline">
                     <a
-                        href="https://twitter.com/@sekansonnft"
+                        href="https://twitter.com/thesekanson"
                         target="_blank"
                         rel="noreferrer"
                     >

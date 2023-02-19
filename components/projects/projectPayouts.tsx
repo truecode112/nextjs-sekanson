@@ -107,8 +107,8 @@ const ProjectPayouts = (props: Props) => {
                         <tr className="text-gray-700">
                             <td className="border-b-2 p-4 text-left">
                                 <div className="flex flex-col">
-                                    <p className="text-2xl font-semibold text-gray-700 ">mintplex.eth</p>
-                                    <p className="text-xs text-gray-700 italic">Mintplex takes no fees on primary or secondary sales!
+                                    <p className="text-2xl font-semibold text-gray-700 ">Sekanson.eth</p>
+                                    <p className="text-xs text-gray-700 italic">Sekanson takes no fees on primary or secondary sales!
                                     </p>
                                 </div>
                             </td>

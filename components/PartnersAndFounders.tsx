@@ -17,7 +17,7 @@ const PartnersAndFounders = (props: Props) => {
             id: "2",
             src: "/images/typedream.svg",
             alt: "Sekanson Partner",
-            href: "https://typedream.com/?ref=Sekanson.xyz",
+            href: "https://typedream.com/?ref=sekanson.com",
         },
         {
             id: "3",
@@ -29,55 +29,55 @@ const PartnersAndFounders = (props: Props) => {
             id: "4",
             src: "/images/quixotic.svg",
             alt: "Sekanson Partner",
-            href: "https://qx.app/?ref=Sekanson.xyz",
+            href: "https://qx.app/?ref=sekanson.com",
         },
         {
             id: "5",
             src: "/images/stratos.svg",
             alt: "Sekanson Partner",
-            href: "https://stratosnft.io/?ref=Sekanson.xyz",
+            href: "https://stratosnft.io/?ref=sekanson.com",
         },
         {
             id: "6",
             src: "/images/simplehash.webp",
             alt: "Sekanson Partner",
-            href: "https://simplehash.com/?ref=Sekanson.xyz",
+            href: "https://simplehash.com/?ref=sekanson.com",
         },
         {
             id: "7",
             src: "/images/bonfire.svg",
             alt: "Sekanson Partner",
-            href: "https://trybonfire.xyz/?ref=Sekanson.xyz",
+            href: "https://trybonfire.xyz/?ref=sekanson.com",
         },
         {
             id: "8",
             src: "/images/mintparty.svg",
             alt: "Sekanson Partner",
-            href: "https://mintparty.xyz/?ref=Sekanson.xyz",
+            href: "https://mintparty.xyz/?ref=sekanson.com",
         },
         {
             id: "9",
             src: "/images/winter.svg",
             alt: "Sekanson Partner",
-            href: "https://www.usewinter.com/?ref=Sekanson.xyz",
+            href: "https://www.usewinter.com/?ref=sekanson.com",
         },
         {
             id: "10",
             src: "/images/dhhlogo.svg",
             alt: "Sekanson Partner",
-            href: "https://nft-inator.com/?ref=Sekanson.xyz",
+            href: "https://nft-inator.com/?ref=sekanson.com",
         },
         {
             id: "11",
             src: "/images/SYNC.svg",
             alt: "Sekanson Partner",
-            href: "https://syncnetwork.io/?ref=Sekanson.xyz",
+            href: "https://syncnetwork.io/?ref=sekanson.com",
         },
         {
             id: "12",
             src: "/images/carma.svg",
             alt: "Sekanson Partner",
-            href: "https://carma.community/?ref=Sekanson.xyz",
+            href: "https://carma.community/?ref=sekanson.com",
         },
     ];
 
@@ -183,7 +183,7 @@ const PartnersAndFounders = (props: Props) => {
                     <a
                         target="_blank"
                         rel="noreferrer"
-                        href="https://xcelerator.berkeley.edu/?ref=Sekanson.xyz"
+                        href="https://xcelerator.berkeley.edu/?ref=sekanson.com"
                         className="w-fit cursor-pointer"
                     >
                         <img

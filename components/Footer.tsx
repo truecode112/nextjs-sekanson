@@ -13,7 +13,7 @@ const Footer = (props: Props) => {
         <footer className="bg-white w-full md:px-16 md:my-6">
             <div className="flex flex-col md:flex-row w-full md:justify-between md:px-16 items-center">
                 <div className="flex-col w-40">
-                    <img src="/android-chrome-512x512.png" className="w-auto h-20" alt="Sekanson.xyz" />
+                    <img src="/android-chrome-512x512.png" className="w-auto h-20" alt="Sekanson.com" />
                     <p className="text-gray-600 text-xs -mt-2">Build better NFT communities without code.</p>
                     <div className="mt-3">
                         <img src="/images/alchemy.svg" className="w-auto h-20 -mb-6" alt="Alchemy Certified Infrastructure Alliance" />
@@ -40,8 +40,8 @@ const Footer = (props: Props) => {
                         )
                     }
 
-                    <a href="https://twitter.com/@Sekansonnft" className="text-lg text-darkgray">Follow us on Twitter</a>
-                    <a href="https://tally.so/r/3q4G4O" target="_blank" rel="noreferrer" className="text-lg text-darkgray">Join our community</a>
+                    <a href="https://twitter.com/thesekanson" className="text-lg text-darkgray">Follow us on Twitter</a>
+                    <a href="https://discord.gg/UqfkPytHKQ" target="_blank" rel="noreferrer" className="text-lg text-darkgray">Join our community</a>
                 </div>
             </div>
             <div className="w-full justify-center flex">

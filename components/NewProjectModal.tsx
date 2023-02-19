@@ -140,7 +140,7 @@ const NewProjectModal = (props: Props) => {
                                             </p>
                                             <p className="pt-2 text-base text-gray-600">
                                                 With
-                                                <b className="text-ramppblue text-bold">Sekanson</b>
+                                                <b className="text-ramppblue text-bold">&nbsp;Sekanson&nbsp;</b>
                                                 you can start a few types of projects. Select the type
                                                 of project that best suits your needs.
                                             </p>

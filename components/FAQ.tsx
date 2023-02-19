@@ -6,32 +6,32 @@ type Props = {};
 const FAQ = (props: Props) => {
   const faqs = [
     {
-      title: "Why use Sekanson over OpenSea, Rarible, or Foundation?",
-      description: "Did you know that when you mint on a marketplace you don\'t actually own your token? Your NFT is minted under the marketplace's smart contract and typically cannot be traded on another marketplace! With Sekanson your NFT is governed by its own smart contract - so it can go anywhere!"
+      title: "Why use Sekanson over Shopify plugins?",
+      description: "This plugin is extremely easy to use, easy to port, and scalable. You can quickly change parameters, and the details of your discount code from the interface on your own Shopify login."
     },
     {
-      title: " Why use Sekanson over OpenSea, Rarible, or Foundation? Cont.",
-      description: "Well, that is up to you! When you use Sekanson we will walk you through all the steps to make sure it works! We recommend Pinata.cloud"
+      title: "Who is Sekanson?",
+      description: "Sekanson is all about tenacity and resilience in not being owed anything in inheritance or as the heir of. The force of working for evry inch and never giving up is the mantra behind this whole concept. This website is founded by a respected entrepreneur by the name of Tiago Teixera. Making a name in both the automotive and tech space, Tiago has built a reputation for good deals and notable clients that stretch from celebrities to fortune 50 companies."
     },
     {
-      title: "Who is hosting my images?",
-      description: "Well, that is up to you! When you use Sekanson we will walk you through all the steps to make sure it works! We recommend Pinata.cloud"
+      title: "Will there ever be more products?",
+      description: "This website is a passion project where the aim is to bring utility and passion to Web3 projects that lack meaning or looking to provide a real mission to bring value to community and fans."
     },
     {
       title: "What does it cost to use Sekanson?",
-      description: "Well, that is up to you! When you use Sekanson we will walk you through all the steps to make sure it works! We recommend Pinata.cloud"
+      description: "Since this is in BETA, there is no cost other than owning a Key. If you are reading this, then you have already paid to be apart of the ecosystem."
     },
     {
-      title: "Who is hosting my images?",
-      description: "Well, that is up to you! When you use Sekanson we will walk you through all the steps to make sure it works! We recommend Pinata.cloud"
+      title: "Who is hosting my information?",
+      description: "When you use one of our plug-ins, all of your data is stored in a backend server system where your information is encrypted and therefore unreadable to anyone other than the API your information was made for."
     },
     {
-      title: "Can I use Sekanson for Music NFTs?",
-      description: "Well, that is up to you! When you use Sekanson we will walk you through all the steps to make sure it works! We recommend Pinata.cloud"
+      title: "Can I use Sekanson for My personal projects?",
+      description: "Whether you want to use this for a client project, or your own, it is built to be used to help bring utility to anyone, anywhere."
     },
     {
       title: "What chains and tokens are supported?",
-      description: "Well, that is up to you! When you use Sekanson we will walk you through all the steps to make sure it works! We recommend Pinata.cloud"
+      description: "So far we have built mainnet and testnets ecosystems for Ethereum, Polygon, Optimism, Avalanche, Binance, and Arbitrum. Possibly with more coming soon."
     },
   ]
 

@@ -198,7 +198,7 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                                     placeholder="Discount code from Shopify"
                                 />
                                 <a
-                                    href="https://docs.rampp.xyz/rampp-apps-faq/shopify-token-discount-plugin/advanced-setup-vs-basic-setup/basic-setup-faq/how-to-generate-a-discount-code"
+                                    href="https://docs.sekanson.com/shopify-nft-discount/"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="underline text-blue-500 text-xs"
@@ -270,7 +270,7 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                         </p>
                     )}
                     <a
-                        href="https://docs.rampp.xyz/rampp-apps-faq/shopify-token-discount-plugin/advanced-setup-vs-basic-setup/advanced-setup-faq/how-to-create-a-shopify-app-key"
+                        href="https://docs.sekanson.com/shopify-nft-discount/"
                         target="_blank"
                         rel="noreferrer"
                         className="underline text-blue-500 text-xs"
@@ -310,7 +310,7 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                         </p>
                     )}
                     <a
-                        href="https://docs.rampp.xyz/rampp-apps-faq/shopify-token-discount-plugin/advanced-setup-vs-basic-setup/advanced-setup-faq/how-to-create-a-shopify-app-key"
+                        href="https://docs.sekanson.com/shopify-nft-discount/"
                         target="_blank"
                         rel="noreferrer"
                         className="underline text-blue-500 text-xs"
@@ -349,7 +349,7 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                         </p>
                     )}
                     <a
-                        href="https://docs.rampp.xyz/rampp-apps-faq/shopify-token-discount-plugin/advanced-setup-vs-basic-setup/advanced-setup-faq/how-to-create-a-shopify-app-key"
+                        href="https://docs.sekanson.com/shopify-nft-discount/"
                         target="_blank"
                         rel="noreferrer"
                         className="underline text-blue-500 text-xs"
@@ -362,7 +362,7 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                         Discount Price Rule ID
                     </label>
                     <p className="text-xs text-gray-500">
-                        This is the template discount Mintplex will use when creating
+                        This is the template discount Sekanson will use when creating
                         discount codes for holders.
                     </p>
                     <Field
@@ -387,7 +387,7 @@ const ShopifyStoreSettingsAccordion = (props: Props) => {
                         </p>
                     )}
                     <a
-                        href="https://docs.rampp.xyz/rampp-apps-faq/shopify-token-discount-plugin/advanced-setup-vs-basic-setup/advanced-setup-faq/how-to-generate-a-price-rule-id"
+                        href="https://docs.sekanson.com/shopify-nft-discount/"
                         target="_blank"
                         rel="noreferrer"
                         className="underline text-blue-500 text-xs"

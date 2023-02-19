@@ -88,7 +88,7 @@ const ProjectFeature = (props: Props) => {
                                     <div className="flex flex-wrap justify-between">
                                         <div className="flex flex-col">
                                             <h1 className="flex-auto text-xl font-semibold text-gray-600 max-w-sm break-words">
-                                                Remove Mintplex.xyz Watermark
+                                                Remove sekanson.com Watermark
                                             </h1>
                                             <p className="w-fit uppercase rounded-full px-2 bg-yellow-300 text-yellow-800 text-xs">
                                                 pro
@@ -107,9 +107,9 @@ const ProjectFeature = (props: Props) => {
                                     </div>
                                     <div className="w-fit flex-wrap text-sm font-medium text-gray-500 mt-2">
                                         <p className="max-w-sm">
-                                            At the bottom of all Mintplex generated contracts is a
+                                            At the bottom of all Sekanson generated contracts is a
                                             comment disclosing how your project is powered by
-                                            Mintplex. You can delete this comment by enabling this
+                                            Sekanson. You can delete this comment by enabling this
                                             feature
                                         </p>
                                     </div>
